@@ -56,6 +56,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		55B2A4261A572C9900CAAC86 /* Icons */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Icons;
+			sourceTree = "<group>";
+		};
 		5D06C66E19D8CFFE0082F2DE = {
 			isa = PBXGroup;
 			children = (
@@ -77,6 +84,7 @@
 		5D06C67919D8CFFE0082F2DE /* Lesson01 */ = {
 			isa = PBXGroup;
 			children = (
+				55B2A4261A572C9900CAAC86 /* Icons */,
 				55B5C6AA1A48D1D4003FFB2A /* ProfilePic1.JPG */,
 				5D06C67C19D8CFFE0082F2DE /* AppDelegate.swift */,
 				5D06C67E19D8CFFE0082F2DE /* ViewController.swift */,

@@ -51,7 +51,7 @@
                             </mask>
                         </variation>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Music" id="pbA-TK-v4m"/>
+                    <tabBarItem key="tabBarItem" title="Music" image="sample-1013-hammer.png" id="pbA-TK-v4m"/>
                     <navigationItem key="navigationItem" id="GFe-l0-dix"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -67,6 +67,7 @@
                         <viewControllerLayoutGuide type="bottom" id="x7f-qx-pRr"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="F0n-1S-GEQ">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Settings" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z7t-iJ-Pqs">
@@ -113,7 +114,7 @@
                             </mask>
                         </variation>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Settings" id="qjZ-Mz-UOx"/>
+                    <tabBarItem key="tabBarItem" title="Settings" image="sample-401-globe.png" id="qjZ-Mz-UOx"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jwd-bO-Fp3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -128,6 +129,7 @@
                         <viewControllerLayoutGuide type="bottom" id="lXf-4R-w3w"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="2Ym-Ge-maW">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Ew-WK-DzW">
@@ -152,7 +154,7 @@
                             </mask>
                         </variation>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Player" id="0o2-fl-XHW"/>
+                    <tabBarItem key="tabBarItem" title="Player" image="sample-335-magic-wand.png" id="0o2-fl-XHW"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U49-9Y-F4A" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -179,4 +181,9 @@
             <point key="canvasLocation" x="993" y="1049"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="sample-1013-hammer.png" width="16" height="28"/>
+        <image name="sample-335-magic-wand.png" width="28" height="28"/>
+        <image name="sample-401-globe.png" width="28" height="28"/>
+    </resources>
 </document>
