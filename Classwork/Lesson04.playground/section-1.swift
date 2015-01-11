@@ -62,47 +62,47 @@ if (number % number == 0){
 
 // TODO: The first fibonacci number is 0, the second is 1, the third is 1, the fourth is two, the fifth is 3, the sixth is 5, etc. The Xth fibonacci number is the sum of the X-1th fibonacci number and the X-2th fibonacci number. Print the 37th fibonacci number below
 
-var fibonacci = [0, 1, 1, 2, 3, 5]
+var fibNum = 9, currentValue = 0, nextValue = 1, result = 0
 
-for index in 0...37 {
-    println((index-1)+(index-2))
+for index in 0..<fibNum {
+    //currentValue = 3
+    //tempVar = becomes 3
+    let tempVar = currentValue
+    //currentValue becomes next (5)
+    currentValue = nextValue
+    //next value becomes old currentValue + new currentValue
+    nextValue = tempVar + currentValue
+    result = tempVar
 }
-
-/*for var i = 0; i < 38; ++i {
-    var a = i-1
-    var b = i-2
-    var sum = a+b
-    println(sum)
-} */
-
-for var a = 0; a < 38; ++a {
-    var b = a-1
-}
-
-for var c = 1; c < 38; ++c {
-    var d = c-2
-}
-
-for index in 0...37 {
-    if (index == 0) {
-    var index = 0
-    } else if (index == 1) {
-    var index = 1
-    } else {
-    index = (index-1)+(index-2)
-    }
-    println(index)
-}
-
-
-
-
-
-
-
+println("Fib number is \(result)")
 
 // TODO: Print out "Hello {whatever the value of name is}, your name is {however long the string name is} characters long!. Use countElements()
 
+println("Hello \(name), your name is \(countElements(name)) characters long!")
+
+
 // TODO: Print the sum of one hundred random numbers. Use rand() to generate random numbers.
 
+var sum = 0
+for i in 1...100 {
+    sum += Int(rand())
+}
+println(sum)
+
+
 // Bonus TO DO: Write a program that prints the numbers from 1 to 100. But for multiples of three print “Fizz” instead of the number and for the multiples of five print “Buzz”. For numbers which are multiples of both three and five print “FizzBuzz”.
+
+let fizz = 3
+let buzz = 5
+
+for var i = 1; i <= 100; ++i {
+    if ((i % fizz) == 0 && (i % buzz) == 0) {
+        println("FizzBuzz")
+    } else if (i % fizz) == 0 {
+        println("Fizz")
+    } else if (i % buzz) == 0 {
+        println("Buzz")
+    } else {
+        println("Number \(i)")
+    }
+}
