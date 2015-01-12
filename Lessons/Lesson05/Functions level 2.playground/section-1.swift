@@ -11,6 +11,24 @@ import UIKit
 // Write a function to find the sum of any two multiples below any max value (make the default 2000)
 // call sould be something like this: addMultiples(mult1: 3, mult2: 5). answer should be 233,168
 
+
+func addMultiples(multi1: Int, multi2: Int) -> Int {
+    var sum = 0, definedMultiple = 0
+    for multiple in 1...2000 {
+        if multiple % multi1 == 0 && multiple % multi2 == 0 {
+        definedMultiple = multiple
+        sum += definedMultiple;
+    }
+   }
+ return sum;
+}
+
+
+addMultiples(3, 5)
+
+
+
+
 // Change calculator: write a function that takes a dollar amount and returns the amount of pennies, nickles, dimes, and quarters needed to return as change (if under $1)
 
 // Variadic paremeters are an endless list of paremeters that can be passed inside a function. The data inside the function itself is greated as an array. Write a function that takes a paremeter describing whether to  multiply or add, and a variadic paremeter that represents all the numbers. Return either the sum or the multiplicaiton of the integerss.
