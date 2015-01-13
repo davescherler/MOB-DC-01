@@ -9,7 +9,7 @@ import UIKit
 // Write a function changeName that prints out "Name changed to 'paremeter'" and that changes the value of the variable passed to it
 
 // Write a function to find the sum of any two multiples below any max value (make the default 2000)
-// call sould be something like this: addMultiples(mult1: 3, mult2: 5). answer should be 233,168
+// call sould be something like this: addMultiples(mult1: 3, mult2: 5)
 
 
 func addMultiples(multi1: Int, multi2: Int) -> Int {
