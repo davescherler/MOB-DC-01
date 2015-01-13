@@ -109,7 +109,7 @@ let age = currentYear - yearOfBirth
 */
 // Return the age at the end of the function
 
-func calculateAge(yearOfBirth: Int) -> Int {
+func calculateAge(#yearOfBirth: Int) -> Int {
     let currentDate = NSDate()
     let currentCalendar = NSCalendar.currentCalendar()
     let currentYear = currentCalendar.component(NSCalendarUnit.CalendarUnitYear, fromDate: currentDate)
@@ -117,12 +117,14 @@ func calculateAge(yearOfBirth: Int) -> Int {
     return age
 }
 
-calculateAge(1986)
+calculateAge(yearOfBirth: 1986)
 
-func tellNameAndAge (name: String, yearOfBirth: Int) {
-    var age = calculateAge(yearOfBirth)
+
+func tellNameAndAge (#name: String, #yearOfBirth: Int) {
+    var age = calculateAge(yearOfBirth: yearOfBirth)
     println("My name is \(name), and my age is \(age)!")
 }
+
 
 
 
@@ -150,5 +152,6 @@ replyWhoIsThere("Dave", "USA")
 
 // Call tellNameAndAge
 
-tellNameAndAge("Dave", 1986)
+tellNameAndAge(name:"Dave", yearOfBirth: 1986)
+
 
