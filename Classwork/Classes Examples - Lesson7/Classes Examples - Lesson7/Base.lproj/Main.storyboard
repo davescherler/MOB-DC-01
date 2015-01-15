@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="Classes_Examples___Lesson7" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d8X-vM-zIG">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" red="0.1095416864" green="0.59987218480000004" blue="1" alpha="0.73999999999999999" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Press for a Dog!">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="makeDog:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="EsP-5N-8Fh"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kRn-Yq-U9J">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Press for a Cat!">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="makeCat:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="0Et-QD-WMh"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter species" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uy1-Zo-nIg">
+                                <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="77" y="143" width="233" height="30"/>
+                                </variation>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hqu-Aa-6aC">
+                                <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vpy-uA-spa">
+                                <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="0.28999999999999998" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="d8X-vM-zIG" firstAttribute="leading" secondItem="kRn-Yq-U9J" secondAttribute="leading" id="7qX-Es-SbR"/>
+                            <constraint firstItem="hqu-Aa-6aC" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="61" id="Bui-2U-HG2"/>
+                            <constraint firstItem="hqu-Aa-6aC" firstAttribute="trailing" secondItem="uy1-Zo-nIg" secondAttribute="trailing" id="Bze-g3-dOr"/>
+                            <constraint firstItem="hqu-Aa-6aC" firstAttribute="leading" secondItem="kRn-Yq-U9J" secondAttribute="leading" id="EzQ-wD-c9l"/>
+                            <constraint firstItem="uy1-Zo-nIg" firstAttribute="trailing" secondItem="kRn-Yq-U9J" secondAttribute="trailing" id="H9T-zT-d8U"/>
+                            <constraint firstItem="uy1-Zo-nIg" firstAttribute="top" secondItem="hqu-Aa-6aC" secondAttribute="bottom" constant="32" id="Ldo-W1-DPz"/>
+                            <constraint firstItem="d8X-vM-zIG" firstAttribute="top" secondItem="kRn-Yq-U9J" secondAttribute="bottom" constant="57" id="Ngc-4s-Mte"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="hqu-Aa-6aC" secondAttribute="trailing" constant="74" id="SoD-q0-Wff"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="d8X-vM-zIG" secondAttribute="bottom" constant="82" id="XOX-1d-cHg"/>
+                            <constraint firstItem="vpy-uA-spa" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="ZZ8-E2-y4I"/>
+                            <constraint firstItem="vpy-uA-spa" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="hM7-ct-JFF"/>
+                            <constraint firstItem="d8X-vM-zIG" firstAttribute="trailing" secondItem="kRn-Yq-U9J" secondAttribute="trailing" id="jSl-k6-msr"/>
+                            <constraint firstItem="hqu-Aa-6aC" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="61" id="pPr-Pe-QJa"/>
+                            <constraint firstItem="vpy-uA-spa" firstAttribute="centerY" secondItem="kh9-bI-dsS" secondAttribute="centerY" id="uAj-8f-MLL"/>
+                            <constraint firstItem="uy1-Zo-nIg" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="66" id="you-2W-YLB"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="d8X-vM-zIG"/>
+                                <exclude reference="kRn-Yq-U9J"/>
+                                <exclude reference="uy1-Zo-nIg"/>
+                                <exclude reference="hqu-Aa-6aC"/>
+                                <exclude reference="vpy-uA-spa"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="Bui-2U-HG2"/>
+                                <exclude reference="Bze-g3-dOr"/>
+                                <exclude reference="EzQ-wD-c9l"/>
+                                <exclude reference="SoD-q0-Wff"/>
+                                <exclude reference="pPr-Pe-QJa"/>
+                                <exclude reference="H9T-zT-d8U"/>
+                                <exclude reference="Ldo-W1-DPz"/>
+                                <exclude reference="you-2W-YLB"/>
+                                <exclude reference="ZZ8-E2-y4I"/>
+                                <exclude reference="hM7-ct-JFF"/>
+                                <exclude reference="uAj-8f-MLL"/>
+                                <exclude reference="7qX-Es-SbR"/>
+                                <exclude reference="Ngc-4s-Mte"/>
+                                <exclude reference="jSl-k6-msr"/>
+                                <exclude reference="XOX-1d-cHg"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="d8X-vM-zIG"/>
+                                <include reference="kRn-Yq-U9J"/>
+                                <include reference="uy1-Zo-nIg"/>
+                                <include reference="hqu-Aa-6aC"/>
+                                <include reference="vpy-uA-spa"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="Bui-2U-HG2"/>
+                                <include reference="Bze-g3-dOr"/>
+                                <include reference="EzQ-wD-c9l"/>
+                                <include reference="SoD-q0-Wff"/>
+                                <include reference="pPr-Pe-QJa"/>
+                                <include reference="H9T-zT-d8U"/>
+                                <include reference="Ldo-W1-DPz"/>
+                                <include reference="you-2W-YLB"/>
+                                <include reference="ZZ8-E2-y4I"/>
+                                <include reference="hM7-ct-JFF"/>
+                                <include reference="uAj-8f-MLL"/>
+                                <include reference="7qX-Es-SbR"/>
+                                <include reference="Ngc-4s-Mte"/>
+                                <include reference="jSl-k6-msr"/>
+                                <include reference="XOX-1d-cHg"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="enterName" destination="hqu-Aa-6aC" id="cjk-4e-70n"/>
+                        <outlet property="enterSpecies" destination="uy1-Zo-nIg" id="U8t-mk-sOk"/>
+                        <outlet property="updateLabel" destination="vpy-uA-spa" id="ITW-38-yKB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-94.5" y="344"/>
+        </scene>
+    </scenes>
+</document>
