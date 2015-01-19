@@ -6,16 +6,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Classes Examples - Lesson7/ViewController.swift"
-            timestampString = "442977399.914741"
+            filePath = "Lesson02/FirstViewController.swift"
+            timestampString = "443296527.693828"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "31"
-            endingLineNumber = "31"
-            landmarkName = "makeDog(_:)"
+            startingLineNumber = "39"
+            endingLineNumber = "39"
+            landmarkName = "whatYouCanDo()"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -25,46 +25,46 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Classes Examples - Lesson7/ViewController.swift"
-            timestampString = "442977404.405381"
+            filePath = "Lesson02/FirstViewController.swift"
+            timestampString = "443295325.969705"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "22"
-            endingLineNumber = "22"
-            landmarkName = "makeCat(_:)"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
+            landmarkName = "whatYouCanDo()"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Classes Examples - Lesson7/ViewController.swift"
-            timestampString = "442977406.995637"
+            filePath = "Lesson02/SecondViewController.swift"
+            timestampString = "443299152.930746"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "21"
-            endingLineNumber = "21"
-            landmarkName = "makeCat(_:)"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
+            landmarkName = "addNumbers()"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Classes Examples - Lesson7/ViewController.swift"
-            timestampString = "443289075.339832"
+            filePath = "Lesson02/FourthViewController.swift"
+            timestampString = "443302396.555382"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "18"
-            endingLineNumber = "18"
-            landmarkName = "ViewController"
-            landmarkType = "3">
+            startingLineNumber = "19"
+            endingLineNumber = "19"
+            landmarkName = "calculateFibonnaci(_:)"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

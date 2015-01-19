@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -43,9 +44,6 @@
                                 <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
-                                <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="77" y="143" width="233" height="30"/>
-                                </variation>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hqu-Aa-6aC">
                                 <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
@@ -85,6 +83,7 @@
                                 <exclude reference="vpy-uA-spa"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="XOX-1d-cHg"/>
                                 <exclude reference="Bui-2U-HG2"/>
                                 <exclude reference="Bze-g3-dOr"/>
                                 <exclude reference="EzQ-wD-c9l"/>
@@ -99,7 +98,6 @@
                                 <exclude reference="7qX-Es-SbR"/>
                                 <exclude reference="Ngc-4s-Mte"/>
                                 <exclude reference="jSl-k6-msr"/>
-                                <exclude reference="XOX-1d-cHg"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -111,6 +109,7 @@
                                 <include reference="vpy-uA-spa"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="XOX-1d-cHg"/>
                                 <include reference="Bui-2U-HG2"/>
                                 <include reference="Bze-g3-dOr"/>
                                 <include reference="EzQ-wD-c9l"/>
@@ -125,7 +124,6 @@
                                 <include reference="7qX-Es-SbR"/>
                                 <include reference="Ngc-4s-Mte"/>
                                 <include reference="jSl-k6-msr"/>
-                                <include reference="XOX-1d-cHg"/>
                             </mask>
                         </variation>
                     </view>
