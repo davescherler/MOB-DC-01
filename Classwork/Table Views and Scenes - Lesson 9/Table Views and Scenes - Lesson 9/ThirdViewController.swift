@@ -24,6 +24,10 @@ class ThirdViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    func saveUser() {
+        println("save user")
+    }
+    
 
     /*
     // MARK: - Navigation

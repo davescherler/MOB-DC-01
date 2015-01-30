@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="G0q-Oc-BQG">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -49,9 +50,6 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aSw-hQ-Iew">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="87" y="485" width="241" height="65"/>
-                                </variation>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NMl-Di-GNm">
                                 <rect key="frame" x="154" y="187" width="294" height="154"/>
@@ -95,10 +93,10 @@ It needs to have an image view and a dismiss button that dismisses the modal. Do
                             <mask key="constraints">
                                 <exclude reference="aQk-Ww-HuP"/>
                                 <exclude reference="nWT-Qo-zW9"/>
+                                <exclude reference="vRT-uS-YMe"/>
                                 <exclude reference="Pa8-TL-Xc4"/>
                                 <exclude reference="V3u-ln-RWb"/>
                                 <exclude reference="gzt-4q-kxo"/>
-                                <exclude reference="vRT-uS-YMe"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -110,10 +108,10 @@ It needs to have an image view and a dismiss button that dismisses the modal. Do
                                 <exclude reference="daB-TD-fOi"/>
                                 <exclude reference="lkv-nx-NKf"/>
                                 <include reference="nWT-Qo-zW9"/>
+                                <include reference="vRT-uS-YMe"/>
                                 <include reference="Pa8-TL-Xc4"/>
                                 <include reference="V3u-ln-RWb"/>
                                 <include reference="gzt-4q-kxo"/>
-                                <include reference="vRT-uS-YMe"/>
                             </mask>
                         </variation>
                     </view>
@@ -136,6 +134,7 @@ It needs to have an image view and a dismiss button that dismisses the modal. Do
                         <viewControllerLayoutGuide type="bottom" id="khj-cZ-MbJ"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Fxh-0o-PYT">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Second View Controller" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wPc-Um-oNo">

@@ -29,7 +29,7 @@ class ViewController: UIViewController {
     }
     
     func initiateRightSwipeOnRedBox () {
-        let swipeRight = UISwipeGestureRecognizer(target: self, action: "swipedRight:")
+        let swipeRight = UISwipeGestureRecognizer(target: self, action: "swipedRight:") //target is usually self.
         
         swipeRight.direction = UISwipeGestureRecognizerDirection.Right
         
@@ -47,7 +47,7 @@ class ViewController: UIViewController {
     }
     
     func swipedRight(sender: UIGestureRecognizer) {
-        self.performSegueWithIdentifier("showSecondVC", sender: self)  //method that is run after the swipe
+        self.performSegueWithIdentifier("showSecondVC", sender: self)  //method that is run after the swipe. sender is usually self.
     }
     
     override func didReceiveMemoryWarning() {
