@@ -12,8 +12,14 @@ protocol Campus {
     func addCampusToArray(campusName: String)
 }
 
-class AddViewController: UIViewController {
+class AddViewController: UIViewController, UITextFieldDelegate {
 
+    @IBAction func pressPostButton(sender: AnyObject) {
+        //first step in setting notification
+        NSNotificationCenter.defaultCenter().postNotificationName("unhideHiddenLabels", object: nil)
+    }
+    @IBOutlet weak var hiddenLabel: UILabel!
+    @IBOutlet weak var errorMessage: UILabel!
     @IBOutlet weak var addTextBox: UITextField!
     
     var delegate: Campus?
@@ -24,8 +30,39 @@ class AddViewController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        self.addTextBox.delegate = self
+        self.errorMessage.hidden = true
+        self.hiddenLabel.hidden = true
+        NSNotificationCenter.defaultCenter().addObserver(self,
+            selector: "unhideCurrentLabels:",
+            name: "unhideHiddenLabels",
+            object: nil)
+        
+        NSNotificationCenter.defaultCenter().addObserver(self,
+            selector: "textHasChanged:",
+            name: UITextFieldTextDidChangeNotification,
+            object: nil)
+    }
+    
+    func textHasChanged(notification: NSNotification) {
+        println("hooray, test has changed!")
+    }
+    
+    func unhideCurrentLabels(notification: NSNotification) {
+        self.hiddenLabel.hidden = false
+        println("triggered unhideHiddenLabels notification")
+    }
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        if self.addTextBox.text.isEmpty {
+            println("Your text field is empty, enter something!")
+            addTextBox.resignFirstResponder()
+            self.errorMessage.hidden = false
+        } else {
+            self.errorMessage.hidden = true
+            addTextBox.resignFirstResponder()
+        }
+        return true
     }
 
     override func didReceiveMemoryWarning() {

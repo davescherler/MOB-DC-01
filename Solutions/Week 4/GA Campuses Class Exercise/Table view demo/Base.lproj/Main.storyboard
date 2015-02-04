@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C106a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="5Xk-QK-uGh">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="5Xk-QK-uGh">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
@@ -91,6 +91,38 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your text field is empty, enter something!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6ls-K4-DR0">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="44" y="94" width="312" height="21"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hidden Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eLw-JE-ydR">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="149" y="391" width="102" height="21"/>
+                                </variation>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OWG-C0-3qi">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Post Notification">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="16" y="455" width="368" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="pressPostButton:" destination="x5v-ez-zer" eventType="touchUpInside" id="uVU-5O-CN5"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -109,6 +141,9 @@
                                 <exclude reference="2my-Iz-Xph"/>
                                 <exclude reference="Ha6-Og-uoT"/>
                                 <exclude reference="jDA-Nl-LbS"/>
+                                <exclude reference="6ls-K4-DR0"/>
+                                <exclude reference="eLw-JE-ydR"/>
+                                <exclude reference="OWG-C0-3qi"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="2g5-P6-84R"/>
@@ -127,6 +162,9 @@
                                 <include reference="2my-Iz-Xph"/>
                                 <include reference="Ha6-Og-uoT"/>
                                 <include reference="jDA-Nl-LbS"/>
+                                <include reference="6ls-K4-DR0"/>
+                                <include reference="eLw-JE-ydR"/>
+                                <include reference="OWG-C0-3qi"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="2g5-P6-84R"/>
@@ -143,6 +181,8 @@
                     </view>
                     <connections>
                         <outlet property="addTextBox" destination="2my-Iz-Xph" id="ZCD-8j-7kD"/>
+                        <outlet property="errorMessage" destination="6ls-K4-DR0" id="u9b-RG-Rnq"/>
+                        <outlet property="hiddenLabel" destination="eLw-JE-ydR" id="ZVx-RB-Xqe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ONF-XN-six" userLabel="First Responder" sceneMemberID="firstResponder"/>

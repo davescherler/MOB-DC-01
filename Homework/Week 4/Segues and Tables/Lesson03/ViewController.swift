@@ -1,6 +1,6 @@
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var viewToSwipe: UIView!
     @IBOutlet weak var pressForTableView: UIButton!
    
