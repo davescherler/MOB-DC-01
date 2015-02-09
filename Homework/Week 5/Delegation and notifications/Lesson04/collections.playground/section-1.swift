@@ -143,3 +143,28 @@ for campus in arrayOfDicts {
     campus["au"]
 }
 
+var dict: [String: String] = ["Dave": "DC"]
+
+var arrayDict = [dict]
+arrayDict.append(["Tedi": "NY"])
+
+var myDict = ["tedi": "dc", "dave": "ny"]
+
+var tempDict = ["name": "tedi", "location": "dc"]
+
+tempDict["name"]
+
+
+var daveDict = ["name": "dave", "location": "ny"]
+
+
+
+
+
+
+
+
+
+
+
+

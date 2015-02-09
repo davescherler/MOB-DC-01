@@ -53,7 +53,7 @@ class EventsTableViewController: UITableViewController, EventProtocol {
         let eventAtIndex = arrEvents[indexPath.row]
         
         // set textLabel and detailTextLabel
-        cell.textLabel.text = eventAtIndex.name
+        cell.textLabel?.text = eventAtIndex.name
         cell.detailTextLabel!.text = eventAtIndex.location
 
         return cell

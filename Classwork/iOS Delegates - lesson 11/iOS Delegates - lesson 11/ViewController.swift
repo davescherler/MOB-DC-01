@@ -10,8 +10,8 @@ import UIKit
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate {  //here, we associat the VC with the tableview properties
     
-    //var gaCampuses = ["DC", "NY", "MD", "LA"]  //array for the various campus locations
-    var gaCampuses: [String] = []
+    var gaCampuses = ["DC", "NY", "MD", "LA"]  //array for the various campus locations
+    //var gaCampuses: [String] = []
     
     @IBOutlet weak var stuffTextField: UITextField!
     @IBOutlet weak var campusesTable: UITableView!
@@ -30,7 +30,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         }
         
         stuffTextField.delegate = self //establishing the delegate
-        
     }
     
     func textFieldShouldReturn(textField: UITextField) -> Bool {
