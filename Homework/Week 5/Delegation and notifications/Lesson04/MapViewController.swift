@@ -45,7 +45,7 @@ class MapViewController: UIViewController, UITextFieldDelegate, UITableViewDeleg
         textBoxOne = UITextField(frame: CGRect(x: self.view.frame.width * 0.05, y: 100, width: self.view.frame.width * 0.9, height: 40))
         textBoxOne.borderStyle = UITextBorderStyle.RoundedRect
         textBoxOne.backgroundColor = UIColor.whiteColor()
-        textBoxOne.placeholder = ""
+        textBoxOne.placeholder = "Enter Your Name"
         textBoxOne.delegate = self
         self.view.addSubview(textBoxOne)
         
@@ -53,21 +53,26 @@ class MapViewController: UIViewController, UITextFieldDelegate, UITableViewDeleg
         textBoxTwo = UITextField(frame: CGRect(x: self.view.frame.width * 0.05, y: 150, width: self.view.frame.width * 0.90, height: 40))
         textBoxTwo.borderStyle = UITextBorderStyle.RoundedRect
         textBoxTwo.backgroundColor = UIColor.whiteColor()
-        textBoxTwo.placeholder = ""
+        textBoxTwo.placeholder = "Enter Your Location"
         textBoxTwo.delegate = self
         self.view.addSubview(textBoxTwo)
     }
     
+    
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         var name = String(self.textBoxOne.text)
         var location = String(self.textBoxTwo.text)
-        dict.append(["name": name, "location": location])
+        self.dict.append(["name": name, "location": location])
+        println(self.dict)
+        println("==========")
         
         
         //dictionaryArray.append([self.textBoxOne.text: self.textBoxTwo.text])
         //dictionaryArray.append([String(self.textBoxOne.text): String(self.textBoxTwo.text)])
         //dictionary["\(self.textBoxOne.text)"] = "\(self.textBoxTwo.text)"
-        dictionaryTableView.reloadData()
+        self.dictionaryTableView.reloadData()
+
+        self.dict.count
         println("\(dict)")
         
         //send a notification to turn boxes red.
@@ -80,11 +85,11 @@ class MapViewController: UIViewController, UITextFieldDelegate, UITableViewDeleg
     }
 
     func makeTableView() {
-        dictionaryTableView = UITableView(frame: CGRect(x: self.view.frame.width * 0.05, y: 200, width: self.view.frame.width * 0.90, height: 100))
-        dictionaryTableView.delegate = self
-        dictionaryTableView.dataSource = self
-        dictionaryTableView.reloadData()
-        self.view.addSubview(dictionaryTableView)
+        self.dictionaryTableView = UITableView(frame: CGRect(x: self.view.frame.width * 0.05, y: 200, width: self.view.frame.width * 0.90, height: self.view.frame.height * 0.75))
+        self.dictionaryTableView.delegate = self
+        self.dictionaryTableView.dataSource = self
+        self.dictionaryTableView.reloadData()
+        self.view.addSubview(self.dictionaryTableView)
         
     }
     
@@ -102,7 +107,7 @@ class MapViewController: UIViewController, UITextFieldDelegate, UITableViewDeleg
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCellWithIdentifier("CellIdentifier") as? UITableViewCell ?? UITableViewCell(style: .Default, reuseIdentifier: "CellIdentifier")
-        cell.textLabel?.text = "\(self.dict[indexPath.row]["name"]) is from (self.dict[indexPath.row]["location"])"
+        cell.textLabel?.text = self.dict[indexPath.row]["name"]! +  " is from " + self.dict[indexPath.row]["location"]!
             println("about to return cell")
             return cell
        }
@@ -111,7 +116,7 @@ class MapViewController: UIViewController, UITextFieldDelegate, UITableViewDeleg
     func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         
         if editingStyle == .Delete {
-            //self.dictionaryArray.removeAtIndex(indexPath.row)
+            self.dict.removeAtIndex(indexPath.row)
             tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
             self.dict.count
         }

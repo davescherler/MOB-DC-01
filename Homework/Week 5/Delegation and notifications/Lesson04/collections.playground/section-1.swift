@@ -120,6 +120,7 @@ gaCampuses.removeValueForKey("sf")
 
 // Creating using literal in short form
 var newGaCampuses = ["au": "Austin", "ci": "Chicago", "hk": "Hong Kong"]
+newGaCampuses["au"]
 
 // Iterate over dictionary keys
 for campusKey in newGaCampuses.keys {
