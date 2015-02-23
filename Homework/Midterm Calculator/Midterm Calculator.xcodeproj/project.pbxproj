@@ -161,9 +161,11 @@
 				TargetAttributes = {
 					55BD7AA41A92904A00EEC5C1 = {
 						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = A6L8SC274W;
 					};
 					55BD7AB91A92904B00EEC5C1 = {
 						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = A6L8SC274W;
 						TestTargetID = 55BD7AA41A92904A00EEC5C1;
 					};
 				};
@@ -356,6 +358,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -367,6 +371,7 @@
 				INFOPLIST_FILE = "Midterm CalculatorTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Midterm Calculator.app/Midterm Calculator";
 			};
 			name = Debug;
@@ -375,6 +380,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -382,6 +389,7 @@
 				INFOPLIST_FILE = "Midterm CalculatorTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Midterm Calculator.app/Midterm Calculator";
 			};
 			name = Release;

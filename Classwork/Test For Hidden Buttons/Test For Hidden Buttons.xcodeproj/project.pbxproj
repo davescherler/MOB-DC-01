@@ -1,0 +1,420 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		55C0EDFA1A96C38E0094217F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C0EDF91A96C38E0094217F /* AppDelegate.swift */; };
+		55C0EDFC1A96C38E0094217F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C0EDFB1A96C38E0094217F /* ViewController.swift */; };
+		55C0EDFF1A96C38E0094217F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55C0EDFD1A96C38E0094217F /* Main.storyboard */; };
+		55C0EE011A96C38E0094217F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55C0EE001A96C38E0094217F /* Images.xcassets */; };
+		55C0EE041A96C38E0094217F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 55C0EE021A96C38E0094217F /* LaunchScreen.xib */; };
+		55C0EE101A96C38F0094217F /* Test_For_Hidden_ButtonsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C0EE0F1A96C38F0094217F /* Test_For_Hidden_ButtonsTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		55C0EE0A1A96C38F0094217F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 55C0EDEC1A96C38E0094217F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 55C0EDF31A96C38E0094217F;
+			remoteInfo = "Test For Hidden Buttons";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		55C0EDF41A96C38E0094217F /* Test For Hidden Buttons.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Test For Hidden Buttons.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		55C0EDF81A96C38E0094217F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		55C0EDF91A96C38E0094217F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		55C0EDFB1A96C38E0094217F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		55C0EDFE1A96C38E0094217F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		55C0EE001A96C38E0094217F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		55C0EE031A96C38E0094217F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		55C0EE091A96C38F0094217F /* Test For Hidden ButtonsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Test For Hidden ButtonsTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		55C0EE0E1A96C38F0094217F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		55C0EE0F1A96C38F0094217F /* Test_For_Hidden_ButtonsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test_For_Hidden_ButtonsTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		55C0EDF11A96C38E0094217F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		55C0EE061A96C38F0094217F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		55C0EDEB1A96C38E0094217F = {
+			isa = PBXGroup;
+			children = (
+				55C0EDF61A96C38E0094217F /* Test For Hidden Buttons */,
+				55C0EE0C1A96C38F0094217F /* Test For Hidden ButtonsTests */,
+				55C0EDF51A96C38E0094217F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		55C0EDF51A96C38E0094217F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				55C0EDF41A96C38E0094217F /* Test For Hidden Buttons.app */,
+				55C0EE091A96C38F0094217F /* Test For Hidden ButtonsTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		55C0EDF61A96C38E0094217F /* Test For Hidden Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				55C0EDF91A96C38E0094217F /* AppDelegate.swift */,
+				55C0EDFB1A96C38E0094217F /* ViewController.swift */,
+				55C0EDFD1A96C38E0094217F /* Main.storyboard */,
+				55C0EE001A96C38E0094217F /* Images.xcassets */,
+				55C0EE021A96C38E0094217F /* LaunchScreen.xib */,
+				55C0EDF71A96C38E0094217F /* Supporting Files */,
+			);
+			path = "Test For Hidden Buttons";
+			sourceTree = "<group>";
+		};
+		55C0EDF71A96C38E0094217F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				55C0EDF81A96C38E0094217F /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		55C0EE0C1A96C38F0094217F /* Test For Hidden ButtonsTests */ = {
+			isa = PBXGroup;
+			children = (
+				55C0EE0F1A96C38F0094217F /* Test_For_Hidden_ButtonsTests.swift */,
+				55C0EE0D1A96C38F0094217F /* Supporting Files */,
+			);
+			path = "Test For Hidden ButtonsTests";
+			sourceTree = "<group>";
+		};
+		55C0EE0D1A96C38F0094217F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				55C0EE0E1A96C38F0094217F /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		55C0EDF31A96C38E0094217F /* Test For Hidden Buttons */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 55C0EE131A96C38F0094217F /* Build configuration list for PBXNativeTarget "Test For Hidden Buttons" */;
+			buildPhases = (
+				55C0EDF01A96C38E0094217F /* Sources */,
+				55C0EDF11A96C38E0094217F /* Frameworks */,
+				55C0EDF21A96C38E0094217F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Test For Hidden Buttons";
+			productName = "Test For Hidden Buttons";
+			productReference = 55C0EDF41A96C38E0094217F /* Test For Hidden Buttons.app */;
+			productType = "com.apple.product-type.application";
+		};
+		55C0EE081A96C38F0094217F /* Test For Hidden ButtonsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 55C0EE161A96C38F0094217F /* Build configuration list for PBXNativeTarget "Test For Hidden ButtonsTests" */;
+			buildPhases = (
+				55C0EE051A96C38F0094217F /* Sources */,
+				55C0EE061A96C38F0094217F /* Frameworks */,
+				55C0EE071A96C38F0094217F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				55C0EE0B1A96C38F0094217F /* PBXTargetDependency */,
+			);
+			name = "Test For Hidden ButtonsTests";
+			productName = "Test For Hidden ButtonsTests";
+			productReference = 55C0EE091A96C38F0094217F /* Test For Hidden ButtonsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		55C0EDEC1A96C38E0094217F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = DaveScherler;
+				TargetAttributes = {
+					55C0EDF31A96C38E0094217F = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+					55C0EE081A96C38F0094217F = {
+						CreatedOnToolsVersion = 6.1.1;
+						TestTargetID = 55C0EDF31A96C38E0094217F;
+					};
+				};
+			};
+			buildConfigurationList = 55C0EDEF1A96C38E0094217F /* Build configuration list for PBXProject "Test For Hidden Buttons" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 55C0EDEB1A96C38E0094217F;
+			productRefGroup = 55C0EDF51A96C38E0094217F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				55C0EDF31A96C38E0094217F /* Test For Hidden Buttons */,
+				55C0EE081A96C38F0094217F /* Test For Hidden ButtonsTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		55C0EDF21A96C38E0094217F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				55C0EDFF1A96C38E0094217F /* Main.storyboard in Resources */,
+				55C0EE041A96C38E0094217F /* LaunchScreen.xib in Resources */,
+				55C0EE011A96C38E0094217F /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		55C0EE071A96C38F0094217F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		55C0EDF01A96C38E0094217F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				55C0EDFC1A96C38E0094217F /* ViewController.swift in Sources */,
+				55C0EDFA1A96C38E0094217F /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		55C0EE051A96C38F0094217F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				55C0EE101A96C38F0094217F /* Test_For_Hidden_ButtonsTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		55C0EE0B1A96C38F0094217F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 55C0EDF31A96C38E0094217F /* Test For Hidden Buttons */;
+			targetProxy = 55C0EE0A1A96C38F0094217F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		55C0EDFD1A96C38E0094217F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				55C0EDFE1A96C38E0094217F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		55C0EE021A96C38E0094217F /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				55C0EE031A96C38E0094217F /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		55C0EE111A96C38F0094217F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		55C0EE121A96C38F0094217F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		55C0EE141A96C38F0094217F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Test For Hidden Buttons/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		55C0EE151A96C38F0094217F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Test For Hidden Buttons/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		55C0EE171A96C38F0094217F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Test For Hidden ButtonsTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Test For Hidden Buttons.app/Test For Hidden Buttons";
+			};
+			name = Debug;
+		};
+		55C0EE181A96C38F0094217F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Test For Hidden ButtonsTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Test For Hidden Buttons.app/Test For Hidden Buttons";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		55C0EDEF1A96C38E0094217F /* Build configuration list for PBXProject "Test For Hidden Buttons" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				55C0EE111A96C38F0094217F /* Debug */,
+				55C0EE121A96C38F0094217F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		55C0EE131A96C38F0094217F /* Build configuration list for PBXNativeTarget "Test For Hidden Buttons" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				55C0EE141A96C38F0094217F /* Debug */,
+				55C0EE151A96C38F0094217F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		55C0EE161A96C38F0094217F /* Build configuration list for PBXNativeTarget "Test For Hidden ButtonsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				55C0EE171A96C38F0094217F /* Debug */,
+				55C0EE181A96C38F0094217F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 55C0EDEC1A96C38E0094217F /* Project object */;
+}
