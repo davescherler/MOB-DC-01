@@ -10,7 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    var activeButton: UIButton?  //var for tracking which button was pressed most recently
+    var activeButton: UIButton? = nil //var for tracking which button was pressed most recently
     var memoryAddButton = UIButton()
     var memoryRecallButton = UIButton()
     var memoryClearButton = UIButton()
@@ -41,24 +41,28 @@ class ViewController: UIViewController {
     func add(notification: NSNotification) {
         self.adding = true
         self.subtotal = NSString(string: self.display.text!).doubleValue
+        println("The active operation is adding")
         println("The subtotal is \(self.subtotal)")
     }
     // subtract func that is called from the 'minus button pressed' notification
     func subtract(notification: NSNotification) {
         self.subtracting = true
         self.subtotal = NSString(string: self.display.text!).doubleValue
+        println("The active operation is subtracting")
         println("The subtotal is \(self.subtotal)")
     }
     // multiply func that is called from the 'multiply button pressed' notification
     func multiply(notification: NSNotification) {
         self.multiplying = true
         self.subtotal = NSString(string: self.display.text!).doubleValue
+        println("The active operation is multiplying")
         println("The subtotal is \(self.subtotal)")
     }
     // divide func that is called from the 'divide button pressed' notification
     func divide(notification: NSNotification) {
         self.dividing = true
         self.subtotal = NSString(string: self.display.text!).doubleValue
+        println("The active operation is dividing")
         println("\(self.subtotal)")
     }
     // percent func that is called from the 'percent button pressed' notification
@@ -89,16 +93,23 @@ class ViewController: UIViewController {
     @IBAction func showMemoryButtons(sender: UISwipeGestureRecognizer) {
         println("swipe down")
         
-        self.acVerticalSpaceToDisplay.constant = self.display.frame.height - 75
-        //self.memoryAddButton.frame.height
+        if activeButton == nil {
+            self.plusButtonOutlet?.setTitleColor(UIColor.whiteColor(), forState: .Normal)
+            self.minusButtonOutlet.setTitleColor(UIColor.whiteColor(), forState: .Normal)
+            self.multiplyButtonOutlet.setTitleColor(UIColor.whiteColor(), forState: .Normal)
+            self.divideButtonOutlet.setTitleColor(UIColor.whiteColor(), forState: .Normal)
+        } else {
+        }
+
+        self.acVerticalSpaceToDisplay.constant = self.display.frame.height - 100
         
-        UIView.animateWithDuration(3, animations: {
-            self.view.addSubview(self.memoryAddButton)
-            self.memoryAddButton.setTranslatesAutoresizingMaskIntoConstraints(false)
-            self.memoryAddButton.backgroundColor = UIColor.blueColor()
-            self.memoryAddButton.setTitle("M+", forState: .Normal)
-            self.memoryAddButton.titleLabel?.font = UIFont(name: "Avenir", size: 25)
-            self.memoryAddButton.addTarget(self, action: "memoryAddButtonPressed:", forControlEvents: .TouchUpInside)
+        self.view.addSubview(self.memoryAddButton)
+        self.memoryAddButton.setTranslatesAutoresizingMaskIntoConstraints(false)
+        self.memoryAddButton.backgroundColor = UIColor.blueColor()
+        self.memoryAddButton.setTitle("M+", forState: .Normal)
+        self.memoryAddButton.setTitleColor(UIColor.whiteColor(), forState: .Normal)
+        self.memoryAddButton.titleLabel?.font = UIFont(name: "Avenir", size: 25)
+        self.memoryAddButton.addTarget(self, action: "memoryAddButtonPressed:", forControlEvents: .TouchUpInside)
         
         let memoryAddButtonVerticalPosition = NSLayoutConstraint(item: self.memoryAddButton,
             attribute: NSLayoutAttribute.Top,
@@ -122,7 +133,7 @@ class ViewController: UIViewController {
             toItem: nil,
             attribute: NSLayoutAttribute.Height,
             multiplier: 1,
-            constant: 65)
+            constant: 60)
         
         let memoryAddButtonWidth = NSLayoutConstraint(item: self.memoryAddButton,
             attribute: NSLayoutAttribute.Width,
@@ -132,20 +143,13 @@ class ViewController: UIViewController {
             multiplier: 1,
             constant: 0)
             
-      /*  let memoryAddButtonBottom = NSLayoutConstraint(item: self.memoryAddButton,
-            attribute: NSLayoutAttribute.Bottom,
-            relatedBy: NSLayoutRelation.Equal,
-            toItem: self.acButtonOutlet,
-            attribute: NSLayoutAttribute.Top,
-            multiplier: 1,
-            constant: 0) */
-            
-            self.view.addSubview(self.memoryRecallButton)
-            self.memoryRecallButton.setTranslatesAutoresizingMaskIntoConstraints(false)
-            self.memoryRecallButton.backgroundColor = UIColor.blueColor()
-            self.memoryRecallButton.setTitle("M+ Recall", forState: .Normal)
-            self.memoryRecallButton.titleLabel?.font = UIFont(name: "Avenir", size: 25)
-            self.memoryRecallButton.addTarget(self, action: "memoryRecallButtonPressed:", forControlEvents: .TouchUpInside)
+        self.view.addSubview(self.memoryRecallButton)
+        self.memoryRecallButton.setTranslatesAutoresizingMaskIntoConstraints(false)
+        self.memoryRecallButton.backgroundColor = UIColor.blueColor()
+        self.memoryRecallButton.setTitle("M Recall", forState: .Normal)
+        self.memoryRecallButton.setTitleColor(UIColor.whiteColor(), forState: .Normal)
+        self.memoryRecallButton.titleLabel?.font = UIFont(name: "Avenir", size: 25)
+        self.memoryRecallButton.addTarget(self, action: "memoryRecallButtonPressed:", forControlEvents: .TouchUpInside)
             
             let memoryRecallButtonVerticalPosition = NSLayoutConstraint(item: self.memoryRecallButton,
                 attribute: NSLayoutAttribute.Top,
@@ -169,7 +173,7 @@ class ViewController: UIViewController {
                 toItem: nil,
                 attribute: NSLayoutAttribute.Height,
                 multiplier: 1,
-                constant: 65)
+                constant: 60)
             
             let memoryRecallButtonWidth = NSLayoutConstraint(item: self.memoryRecallButton,
                 attribute: NSLayoutAttribute.Width,
@@ -179,21 +183,13 @@ class ViewController: UIViewController {
                 multiplier: 2,
                 constant: 5)
             
-          /*  let memoryRecallButtonBottom = NSLayoutConstraint(item: self.memoryRecallButton,
-                attribute: NSLayoutAttribute.Bottom,
-                relatedBy: NSLayoutRelation.Equal,
-                toItem: self.acButtonOutlet,
-                attribute: NSLayoutAttribute.Top,
-                multiplier: 1,
-                constant: 0) */
-            
-            
-            self.view.addSubview(self.memoryClearButton)
-            self.memoryClearButton.setTranslatesAutoresizingMaskIntoConstraints(false)
-            self.memoryClearButton.backgroundColor = UIColor.blueColor()
-            self.memoryClearButton.setTitle("MC", forState: .Normal)
-            self.memoryClearButton.titleLabel?.font = UIFont(name: "Avenir", size: 25)
-            self.memoryClearButton.addTarget(self, action: "memoryClearButtonPressed:", forControlEvents: .TouchUpInside)
+        self.view.addSubview(self.memoryClearButton)
+        self.memoryClearButton.setTranslatesAutoresizingMaskIntoConstraints(false)
+        self.memoryClearButton.backgroundColor = UIColor.blueColor()
+        self.memoryClearButton.setTitle("MC", forState: .Normal)
+        self.memoryClearButton.setTitleColor(UIColor.whiteColor(), forState: .Normal)
+        self.memoryClearButton.titleLabel?.font = UIFont(name: "Avenir", size: 25)
+        self.memoryClearButton.addTarget(self, action: "memoryClearButtonPressed:", forControlEvents: .TouchUpInside)
             
             let memoryClearButtonVerticalPosition = NSLayoutConstraint(item: self.memoryClearButton,
                 attribute: NSLayoutAttribute.Top,
@@ -217,7 +213,7 @@ class ViewController: UIViewController {
                 toItem: nil,
                 attribute: NSLayoutAttribute.Height,
                 multiplier: 1,
-                constant: 65)
+                constant: 60)
             
             let memoryClearButtonWidth = NSLayoutConstraint(item: self.memoryClearButton,
                 attribute: NSLayoutAttribute.Width,
@@ -227,20 +223,14 @@ class ViewController: UIViewController {
                 multiplier: 1,
                 constant: 0)
             
-           /* let memoryClearButtonBottom = NSLayoutConstraint(item: self.memoryClearButton,
-                attribute: NSLayoutAttribute.Bottom,
-                relatedBy: NSLayoutRelation.Equal,
-                toItem: self.acButtonOutlet,
-                attribute: NSLayoutAttribute.Top,
-                multiplier: 1,
-                constant: 0) */
-            
         self.view.addConstraints([memoryAddButtonVerticalPosition, memoryAddButtonHorizontalPosition, memoryAddButtonHeight, memoryAddButtonWidth, memoryRecallButtonVerticalPosition, memoryRecallButtonHorizontalPosition, memoryRecallButtonHeight, memoryRecallButtonWidth, memoryClearButtonVerticalPosition, memoryClearButtonHorizontalPosition, memoryClearButtonHeight, memoryClearButtonWidth,])
-        })
+        
     }
     
     func memoryAddButtonPressed(sender: UIButton) {
         self.memorySubtotal = NSString(string: self.display.text!).doubleValue
+        self.memoryLabelOutlet.hidden = false
+        self.memoryLabelOutlet.text = "M = \(self.memorySubtotal.description)"
         println("The memory value is \(self.memorySubtotal)")
     }
     
@@ -250,15 +240,26 @@ class ViewController: UIViewController {
     
     func memoryClearButtonPressed(sender: UIButton) {
         self.memorySubtotal = 0.00
+        self.memoryLabelOutlet.text = ""
+        self.memoryLabelOutlet.hidden = true
     }
 
     @IBAction func hideMemoryButtons(sender: UISwipeGestureRecognizer) {
         println("swipe up")
-        self.displayLabelHeightConstraint.constant = 150
+        println("the activeButton is \(self.activeButton)")
+        self.displayLabelHeightConstraint.constant = 170
         self.acVerticalSpaceToDisplay.constant = 5
         self.memoryAddButton.removeFromSuperview()
         self.memoryRecallButton.removeFromSuperview()
         self.memoryClearButton.removeFromSuperview()
+        
+        if activeButton == nil {
+            self.plusButtonOutlet?.setTitleColor(UIColor.whiteColor(), forState: .Normal)
+            self.minusButtonOutlet.setTitleColor(UIColor.whiteColor(), forState: .Normal)
+            self.multiplyButtonOutlet.setTitleColor(UIColor.whiteColor(), forState: .Normal)
+            self.divideButtonOutlet.setTitleColor(UIColor.whiteColor(), forState: .Normal)
+        } else {
+        }
     }
     
     
@@ -268,51 +269,61 @@ class ViewController: UIViewController {
     @IBAction func zeroButton(sender: AnyObject) {
         var value = 0
         self.display.text = String(updateDisplay(value))
+        println("you entered \(self.display.text)")
     }
     
     @IBAction func oneButton(sender: AnyObject) {
         var value = 1
         self.display.text = updateDisplay(value)
+        println("you entered \(self.display.text)")
     }
     
     @IBAction func twoButton(sender: AnyObject) {
         var value = 2
         self.display.text = updateDisplay(value)
+        println("you entered \(self.display.text)")
     }
     
     @IBAction func threeButton(sender: AnyObject) {
         var value = 3
         self.display.text = updateDisplay(value)
+        println("you entered \(self.display.text)")
     }
    
     @IBAction func fourButton(sender: AnyObject) {
         var value = 4
         self.display.text = updateDisplay(value)
+        println("you entered \(self.display.text)")
     }
    
     @IBAction func fiveButton(sender: AnyObject) {
         var value = 5
         self.display.text = updateDisplay(value)
+        println("you entered \(self.display.text)")
     }
 
     @IBAction func sixButton(sender: AnyObject) {
         var value = 6
         self.display.text = updateDisplay(value)
+        println("you entered \(self.display.text)")
     }
     
     @IBAction func sevenButton(sender: AnyObject) {
         var value = 7
         self.display.text = updateDisplay(value)
+        println("you entered \(self.display.text)")
     }
     
     @IBAction func eightButton(sender: AnyObject) {
         var value = 8
         self.display.text = updateDisplay(value)
+        println("you entered \(self.display.text)")
     }
     
     @IBAction func nineButton(sender: AnyObject) {
         var value = 9
         self.display.text = updateDisplay(value)
+        println("you entered \(self.display.text)")
     }
     
     @IBAction func decimalButton(sender: AnyObject) {
@@ -387,13 +398,18 @@ class ViewController: UIViewController {
     @IBOutlet weak var divideButtonOutlet: UIButton!
     @IBOutlet weak var displayLabelHeightConstraint: NSLayoutConstraint!
     
+    @IBOutlet weak var memoryLabelOutlet: UILabel!
     @IBOutlet weak var acButtonOutlet: UIButton!
     @IBOutlet weak var acVerticalSpaceToDisplay: NSLayoutConstraint!
     
     @IBAction func equalsButton(sender: UIButton) {
+        println("You pressed Equals and the active button was \(self.activeButton)")
         //setting the operator buttons back to their normal color scheme.
         self.activeButton?.backgroundColor = UIColor(red:0.84, green:0.62, blue:0.27, alpha:1.0)
         self.activeButton?.titleLabel?.textColor = UIColor.whiteColor()
+        sender.backgroundColor = UIColor(red: 0.96, green: 0.23, blue: 0.44, alpha: 1.0)
+        sender.titleLabel?.textColor = UIColor.whiteColor()
+        self.activeButton = sender
         self.activeButton = nil
         
         //solve much performs all the actual math, based on which bool is true.
@@ -429,13 +445,13 @@ class ViewController: UIViewController {
             }
         }
         self.display.text = solve()
+        println("the active button is \(self.activeButton)")
     }
     
     // clears everything, sets all vars back to their default values.
     @IBAction func allClear(sender: AnyObject) {
         self.activeButton?.backgroundColor = UIColor(red:0.84, green:0.62, blue:0.27, alpha:1.0)
         self.activeButton?.titleLabel?.textColor = UIColor.whiteColor()
-        self.activeButton = nil
         self.adding = false
         self.subtracting = false
         self.multiplying = false
@@ -445,11 +461,17 @@ class ViewController: UIViewController {
         self.subtotal = 0.00
         self.displayNumber = "0.00"
         self.display.text = self.displayNumber
+        self.activeButton = nil
+        println("the active button is \(self.activeButton)")
     }
     override func viewDidLoad() {
         super.viewDidLoad()
         self.displayNumber = "0.00"
         self.display.text = self.displayNumber
+        self.activeButton?.backgroundColor = UIColor(red:0.84, green:0.62, blue:0.27, alpha:1.0)
+        self.activeButton?.titleLabel?.textColor = UIColor.whiteColor()
+        self.memoryLabelOutlet.text = ""
+        self.memoryLabelOutlet.hidden = true
         //notifications.
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "add:", name: "plusButtonPressed", object: nil)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "subtract:", name: "minusButtonPressed", object: nil)
