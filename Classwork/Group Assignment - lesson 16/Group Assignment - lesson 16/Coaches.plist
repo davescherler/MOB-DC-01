@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>Name</key>
+		<string>Pete Carrol</string>
+		<key>Years of Experience</key>
+		<string>10</string>
+		<key>Title</key>
+		<string>Offensive Coordinator</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>Bill Belichek</string>
+		<key>Years of Experience</key>
+		<string>20</string>
+		<key>Title</key>
+		<string>Head Coach</string>
+	</dict>
+</array>
+</plist>

@@ -1,7 +1,6 @@
 //
 //  ViewController.swift
 //  Midterm Calculator
-//
 //  Created by Dave Scherler on 2/16/15.
 //  Copyright (c) 2015 DaveScherler. All rights reserved.
 //
@@ -14,11 +13,9 @@ class ViewController: UIViewController {
     var memoryAddButton = UIButton()
     var memoryRecallButton = UIButton()
     var memoryClearButton = UIButton()
+    var numbersToCalc = [0.0, 0.0]
     var memorySubtotal: Double = 0.00
-    var adding: Bool = false
-    var subtracting: Bool = false
-    var multiplying: Bool = false
-    var dividing: Bool = false
+    var operation: String = ""
     var percentage: Bool = false
     var negative: Bool = false   //bools for telling solve func which operation is happening
     var subtotal: Double = 0.00  //var for storing number entered and doing actual math
@@ -38,36 +35,38 @@ class ViewController: UIViewController {
     }
     
     //add func that is called from the 'plus button pressed' notification
-    func add(notification: NSNotification) {
-        self.adding = true
-        self.subtotal = NSString(string: self.display.text!).doubleValue
-        println("The active operation is adding")
-        println("The subtotal is \(self.subtotal)")
-    }
+//    func add() {
+//        self.operation = "adding"
+////        self.subtotal = NSString(string: self.display.text!).doubleValue + self.subtotal
+//        self.numbersToCalc[0] = self.numbersToCalc[0] + numbersToCalc[1] + NSString(string: self.display.text!).doubleValue
+//        self.numbersToCalc[1] = 0
+//        println("The active operation is adding")
+//        println("The subtotal is \(self.subtotal)")
+//    }
     // subtract func that is called from the 'minus button pressed' notification
     func subtract(notification: NSNotification) {
-        self.subtracting = true
+        self.operation = "subtracting"
         self.subtotal = NSString(string: self.display.text!).doubleValue
         println("The active operation is subtracting")
         println("The subtotal is \(self.subtotal)")
     }
     // multiply func that is called from the 'multiply button pressed' notification
     func multiply(notification: NSNotification) {
-        self.multiplying = true
+        self.operation = "multiplying"
         self.subtotal = NSString(string: self.display.text!).doubleValue
         println("The active operation is multiplying")
         println("The subtotal is \(self.subtotal)")
     }
     // divide func that is called from the 'divide button pressed' notification
     func divide(notification: NSNotification) {
-        self.dividing = true
+        self.operation = "dividing"
         self.subtotal = NSString(string: self.display.text!).doubleValue
         println("The active operation is dividing")
         println("\(self.subtotal)")
     }
     // percent func that is called from the 'percent button pressed' notification
     func percent(notification: NSNotification) {
-        self.percentage = true
+        self.operation = "percentage"
         println("percentage is true")
         
         var currentDisplayNumberDouble = NSString(string: self.display.text!).doubleValue
@@ -268,7 +267,7 @@ class ViewController: UIViewController {
     // assigning values to each numeric button, then running that value thru the update display func
     @IBAction func zeroButton(sender: AnyObject) {
         var value = 0
-        self.display.text = String(updateDisplay(value))
+        self.display.text = updateDisplay(value)
         println("you entered \(self.display.text)")
     }
     
@@ -344,7 +343,19 @@ class ViewController: UIViewController {
     // plus button - sends notification and changes color to black when pressed.
     @IBAction func plusButton(sender: UIButton) {
         println("sending notifciation message: plusButtonPressed")
-        NSNotificationCenter.defaultCenter().postNotificationName("plusButtonPressed", object: nil)
+        
+        self.operation = "adding"
+        
+        let sum = MathStuff.add(NSString(string: self.display.text!).doubleValue, previousVal: self.subtotal)
+        
+        self.subtotal = sum
+        self.display.text = "\(sum)"
+        
+        updateBtnState(sender)
+        
+    }
+    
+    func updateBtnState(sender: UIButton) {
         self.activeButton?.backgroundColor = UIColor(red:0.84, green:0.62, blue:0.27, alpha:1.0)
         self.activeButton?.titleLabel?.textColor = UIColor.whiteColor()
         sender.backgroundColor = UIColor.blackColor()
@@ -355,11 +366,7 @@ class ViewController: UIViewController {
     @IBAction func minusButton(sender: UIButton) {
         println("sending notifciation message: minusButtonPressed")
         NSNotificationCenter.defaultCenter().postNotificationName("minusButtonPressed", object: nil)
-        self.activeButton?.backgroundColor = UIColor(red:0.84, green:0.62, blue:0.27, alpha:1.0)
-        self.activeButton?.titleLabel?.textColor = UIColor.whiteColor()
-        sender.backgroundColor = UIColor.blackColor()
-        sender.setTitleColor(UIColor(red:0.84, green:0.62, blue:0.27, alpha:1.0), forState: UIControlState.Normal)
-        self.activeButton = sender
+        updateBtnState(sender)
     }
     // multiply button - sends notification and changes color to black when pressed.
     @IBAction func multiplyButton(sender: UIButton) {
@@ -404,6 +411,7 @@ class ViewController: UIViewController {
     
     @IBAction func equalsButton(sender: UIButton) {
         println("You pressed Equals and the active button was \(self.activeButton)")
+        
         //setting the operator buttons back to their normal color scheme.
         self.activeButton?.backgroundColor = UIColor(red:0.84, green:0.62, blue:0.27, alpha:1.0)
         self.activeButton?.titleLabel?.textColor = UIColor.whiteColor()
@@ -412,39 +420,9 @@ class ViewController: UIViewController {
         self.activeButton = sender
         self.activeButton = nil
         
-        //solve much performs all the actual math, based on which bool is true.
-        func solve() -> String {
-            if adding == true {
-                    var currentDisplayNumberDouble = NSString(string: self.display.text!).doubleValue
-                    println("The display number double stored as \(currentDisplayNumberDouble)")
-                    var result = self.subtotal + currentDisplayNumberDouble
-                    var resultString = result.description
-                    return resultString
-            } else if subtracting == true {
-                    var currentDisplayNumberDouble = NSString(string: self.display.text!).doubleValue
-                    println("The display number double stored as \(currentDisplayNumberDouble)")
-                    var result = self.subtotal - currentDisplayNumberDouble
-                    var resultString = result.description
-                    println("\(self.subtotal)")
-                    return resultString
-            } else if multiplying == true {
-                    var currentDisplayNumberDouble = NSString(string: self.display.text!).doubleValue
-                    println("The display number double stored as \(currentDisplayNumberDouble)")
-                    var result = self.subtotal * currentDisplayNumberDouble
-                    var resultString = result.description
-                    return resultString
-            } else if dividing == true {
-                    var currentDisplayNumberDouble = NSString(string: self.display.text!).doubleValue
-                    println("The display number double stored as \(currentDisplayNumberDouble)")
-                    var result = self.subtotal / currentDisplayNumberDouble
-                    var resultString = result.description
-                    println("\(self.subtotal)")
-                    return resultString
-            } else {
-            return "0.00"
-            }
-        }
-        self.display.text = solve()
+        
+        self.display.text = MathStuff.solve(self.operation, displayText: self.display.text!, subtotal: self.subtotal)
+        
         println("the active button is \(self.activeButton)")
     }
     
@@ -452,16 +430,7 @@ class ViewController: UIViewController {
     @IBAction func allClear(sender: AnyObject) {
         self.activeButton?.backgroundColor = UIColor(red:0.84, green:0.62, blue:0.27, alpha:1.0)
         self.activeButton?.titleLabel?.textColor = UIColor.whiteColor()
-        self.adding = false
-        self.subtracting = false
-        self.multiplying = false
-        self.dividing = false
-        self.percentage = false
-        self.negative = false
-        self.subtotal = 0.00
-        self.displayNumber = "0.00"
-        self.display.text = self.displayNumber
-        self.activeButton = nil
+        self.operation = ""; self.subtotal = 0.00; self.displayNumber = "0.00"; self.display.text = self.displayNumber; self.activeButton = nil
         println("the active button is \(self.activeButton)")
     }
     override func viewDidLoad() {
@@ -473,7 +442,7 @@ class ViewController: UIViewController {
         self.memoryLabelOutlet.text = ""
         self.memoryLabelOutlet.hidden = true
         //notifications.
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "add:", name: "plusButtonPressed", object: nil)
+//        NSNotificationCenter.defaultCenter().addObserver(self, selector: "add:", name: "plusButtonPressed", object: nil)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "subtract:", name: "minusButtonPressed", object: nil)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "multiply:", name: "multiplyButtonPressed", object: nil)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "divide:", name: "divideButtonPressed", object: nil)

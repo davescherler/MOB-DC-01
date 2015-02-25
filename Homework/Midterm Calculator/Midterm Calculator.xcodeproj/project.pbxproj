@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		55872FA41A9D387300508BE8 /* MathStuff.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55872FA31A9D387300508BE8 /* MathStuff.swift */; };
+		55A688051A9CED96002B0C80 /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A688041A9CED96002B0C80 /* Functions.swift */; };
 		55BD7AAB1A92904A00EEC5C1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55BD7AAA1A92904A00EEC5C1 /* AppDelegate.swift */; };
 		55BD7AAD1A92904A00EEC5C1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55BD7AAC1A92904A00EEC5C1 /* ViewController.swift */; };
 		55BD7AB01A92904A00EEC5C1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55BD7AAE1A92904A00EEC5C1 /* Main.storyboard */; };
@@ -26,6 +28,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		55872FA31A9D387300508BE8 /* MathStuff.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MathStuff.swift; sourceTree = "<group>"; };
+		55A688041A9CED96002B0C80 /* Functions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Functions.swift; sourceTree = "<group>"; };
 		55BD7AA51A92904A00EEC5C1 /* Midterm Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Midterm Calculator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		55BD7AA91A92904A00EEC5C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		55BD7AAA1A92904A00EEC5C1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -83,6 +87,8 @@
 				55BD7AB11A92904A00EEC5C1 /* Images.xcassets */,
 				55BD7AB31A92904B00EEC5C1 /* LaunchScreen.xib */,
 				55BD7AA81A92904A00EEC5C1 /* Supporting Files */,
+				55A688041A9CED96002B0C80 /* Functions.swift */,
+				55872FA31A9D387300508BE8 /* MathStuff.swift */,
 			);
 			path = "Midterm Calculator";
 			sourceTree = "<group>";
@@ -214,8 +220,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				55872FA41A9D387300508BE8 /* MathStuff.swift in Sources */,
 				55BD7AAD1A92904A00EEC5C1 /* ViewController.swift in Sources */,
 				55BD7AAB1A92904A00EEC5C1 /* AppDelegate.swift in Sources */,
+				55A688051A9CED96002B0C80 /* Functions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
