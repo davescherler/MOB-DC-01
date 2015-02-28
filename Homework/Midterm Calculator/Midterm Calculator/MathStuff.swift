@@ -9,39 +9,60 @@
 import Foundation
 
 class MathStuff {
-    class func add(displayTotal: Double, previousVal: Double) -> Double {
-        var sum = displayTotal + previousVal
+    class func add(currentDisplayValue: Double, subtotal: Double) -> Double {
+        var sum = currentDisplayValue + subtotal
         return sum
     }
     
-    //solve much performs all the actual math, based on which bool is true.
-    class func solve(operation: String, displayText: String, subtotal: Double) -> String {
+    class func subtract(currentDisplayValue: Double, subtotal: Double) -> Double {
+        
+        return subtotal != 0 ? subtotal - currentDisplayValue : currentDisplayValue - subtotal
+    }
+    
+    class func multiply(currentDisplayValue: Double, subtotal: Double) -> Double {
+        
+        return subtotal != 0 ? currentDisplayValue * subtotal : currentDisplayValue
+    }
+    
+    class func divide(currentDisplayValue: Double, subtotal: Double) -> Double {
+            return subtotal != 0 ? (subtotal / currentDisplayValue) : currentDisplayValue
+        }
+    
+    class func percentage(currentDisplayValue: Double) -> Double {
+        
+        return currentDisplayValue * (1/100)
+    }
+    
+    class func negative(currentDisplayValue: Double) -> Double {
+        
+        return currentDisplayValue * -1
+    }
+    
+    //after i do the conversions in the VC, change the parameters to only pass doubles (not strings)
+    class func solve(operation: String, displayValue: Double, subtotal: Double) -> Double {
         if operation == "adding" {
-            var result = self.add(NSString(string: displayText).doubleValue, previousVal: subtotal)
-            println("result is \(result)")
-            return "\(result)"
+            var result = self.add(displayValue, subtotal: subtotal)
+            println("adding result is \(result)")
+            return result
+            
         } else if operation == "subtracting" {
-            var currentDisplayNumberDouble = NSString(string: displayText).doubleValue
-            println("The display number double stored as \(currentDisplayNumberDouble)")
-            var result = subtotal - currentDisplayNumberDouble
-            var resultString = result.description
-            println("\(subtotal)")
-            return resultString
+            var result = self.subtract(displayValue, subtotal: subtotal)
+            println("subracting result is \(result)")
+            return result
+            
         } else if operation == "multiplying" {
-            var currentDisplayNumberDouble = NSString(string: displayText).doubleValue
-            println("The display number double stored as \(currentDisplayNumberDouble)")
-            var result = subtotal * currentDisplayNumberDouble
-            var resultString = result.description
-            return resultString
+            
+            var result = self.multiply(displayValue, subtotal: subtotal)
+            println("multipling result is \(result)")
+            return result
+            
         } else if operation == "dividing" {
-            var currentDisplayNumberDouble = NSString(string: displayText).doubleValue
-            println("The display number double stored as \(currentDisplayNumberDouble)")
-            var result = subtotal / currentDisplayNumberDouble
-            var resultString = result.description
-            println("\(subtotal)")
-            return resultString
+            var result = self.divide(displayValue, subtotal: subtotal)
+            println("dividing result is \(result)")
+            return result
+            
         } else {
-            return "0.00"
+            return 0.00
         }
     }
 }
