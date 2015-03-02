@@ -12,7 +12,9 @@ class SecondViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        let defaults = NSUserDefaults.standardUserDefaults()
+        
         // Do any additional setup after loading the view.
     }
 }

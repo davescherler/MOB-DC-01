@@ -10,9 +10,9 @@ import UIKit
 class ViewController: UIViewController {
     
     var activeButton: UIButton? = nil //var for tracking which button was pressed most recently
-    var memoryAddButton = UIButton()
-    var memoryRecallButton = UIButton()
-    var memoryClearButton = UIButton()
+//    var memoryAddButton = UIButton()
+//    var memoryRecallButton = UIButton()
+//    var memoryClearButton = UIButton()
     var numbersToCalc = [0.0, 0.0]
     var memorySubtotal: Double = 0.00
     var operation: String = ""
@@ -46,29 +46,33 @@ class ViewController: UIViewController {
     @IBAction func showMemoryButtons(sender: UISwipeGestureRecognizer) {
         println("swipe down")
         
-        if activeButton == nil {
-           makeOperationButtonTextWhite()
-        } else { }
-
-        self.acVerticalSpaceToDisplay.constant = self.display.frame.height - 100
-
         UIView.animateWithDuration(0.5, animations: {
+            self.memoryAddButtonOutlet.alpha = 1
+            self.memoryRecallButtonOutlet.alpha = 1
+            self.memoryClearButtonOutlet.alpha = 1
+            self.memoryAddHeight.constant = 62
+            self.acVerticalSpaceToDisplay.constant = 72
+            self.view.setNeedsUpdateConstraints()
             self.view.layoutIfNeeded()
         })
+        
+        if self.activeButton == nil {
+            self.makeOperationButtonTextWhite()
+        } else { }
     }
-    
-    func memoryAddButtonPressed(sender: UIButton) {
+
+    @IBAction func memoryAddButtonPressed(sender: UIButton) {
         self.memorySubtotal = NSString(string: self.display.text!).doubleValue
         self.memoryLabelOutlet.hidden = false
         self.memoryLabelOutlet.text = "M = \(self.memorySubtotal.description)"
         println("The memory value is \(self.memorySubtotal)")
     }
-    
-    func memoryRecallButtonPressed(sender: UIButton) {
+ 
+    @IBAction func memoryRecallButtonPressed(sender: UIButton) {
         self.display.text = self.memorySubtotal.description
     }
-    
-    func memoryClearButtonPressed(sender: UIButton) {
+
+    @IBAction func memoryClearButtonPressed(sender: UIButton) {
         self.memorySubtotal = 0.00
         self.memoryLabelOutlet.text = ""
         self.memoryLabelOutlet.hidden = true
@@ -77,21 +81,20 @@ class ViewController: UIViewController {
     @IBAction func hideMemoryButtons(sender: UISwipeGestureRecognizer) {
         println("swipe up")
         println("the activeButton is \(self.activeButton)")
-        self.displayLabelHeightConstraint.constant = 170
-        self.acVerticalSpaceToDisplay.constant = 5
-        self.memoryAddButton.removeFromSuperview()
-        self.memoryRecallButton.removeFromSuperview()
-        self.memoryClearButton.removeFromSuperview()
         
-        UIView.animateWithDuration(0.5, animations: {
+        UIView.animateWithDuration(0.5, delay: 0.0, options: UIViewAnimationOptions.CurveEaseIn, animations: {
+            self.memoryAddHeight.constant = 0
+            self.acVerticalSpaceToDisplay.constant = 5
+            self.memoryAddButtonOutlet.alpha = 0
+            self.memoryRecallButtonOutlet.alpha = 0
+            self.memoryClearButtonOutlet.alpha = 0
             self.view.layoutIfNeeded()
-        })
-        
+            }, completion: nil)
+
         if activeButton == nil {
             makeOperationButtonTextWhite()
         } else { }
     }
-    
     
     @IBOutlet weak var display: UILabel!
     
@@ -234,11 +237,14 @@ class ViewController: UIViewController {
     @IBOutlet weak var multiplyButtonOutlet: UIButton!
     @IBOutlet weak var divideButtonOutlet: UIButton!
     @IBOutlet weak var displayLabelHeightConstraint: NSLayoutConstraint!
-    
     @IBOutlet weak var memoryLabelOutlet: UILabel!
     @IBOutlet weak var acButtonOutlet: UIButton!
+    @IBOutlet weak var memoryAddButtonOutlet: UIButton!
+    @IBOutlet weak var memoryRecallButtonOutlet: UIButton!
+    @IBOutlet weak var memoryClearButtonOutlet: UIButton!
     @IBOutlet weak var acVerticalSpaceToDisplay: NSLayoutConstraint!
-    
+    @IBOutlet weak var memoryAddHeight: NSLayoutConstraint!
+
     @IBAction func equalsButton(sender: UIButton) {
         resetActiveButtonState(sender)
         
@@ -261,135 +267,12 @@ class ViewController: UIViewController {
         self.display.text = "0.00"
         self.memoryLabelOutlet.text = ""
         self.memoryLabelOutlet.hidden = true
-        
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "percent:", name: "percentButtonPressed", object: nil)
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "negative:", name: "negativeButtonPressed", object: nil)
-    }
-
-    func makeMemoryButtons() {
-    
-        self.view.addSubview(self.memoryAddButton)
-        self.memoryAddButton.setTranslatesAutoresizingMaskIntoConstraints(false)
-        self.memoryAddButton.backgroundColor = UIColor.blueColor()
-        self.memoryAddButton.setTitle("M+", forState: .Normal)
-        self.memoryAddButton.setTitleColor(UIColor.whiteColor(), forState: .Normal)
-        self.memoryAddButton.titleLabel?.font = UIFont(name: "Avenir", size: 25)
-        self.memoryAddButton.addTarget(self, action: "memoryAddButtonPressed:", forControlEvents: .TouchUpInside)
-        
-        let memoryAddButtonVerticalPosition = NSLayoutConstraint(item: self.memoryAddButton,
-            attribute: NSLayoutAttribute.Top,
-            relatedBy: NSLayoutRelation.Equal,
-            toItem: self.display,
-            attribute: NSLayoutAttribute.Bottom,
-            multiplier: 1,
-            constant: 5)
-        
-        let memoryAddButtonHorizontalPosition = NSLayoutConstraint(item: self.memoryAddButton,
-            attribute: NSLayoutAttribute.Leading,
-            relatedBy: NSLayoutRelation.Equal,
-            toItem: self.display,
-            attribute: NSLayoutAttribute.Leading,
-            multiplier: 1,
-            constant: 0)
-        
-        let memoryAddButtonHeight = NSLayoutConstraint(item: self.memoryAddButton,
-            attribute: NSLayoutAttribute.Height,
-            relatedBy: NSLayoutRelation.Equal,
-            toItem: nil,
-            attribute: NSLayoutAttribute.Height,
-            multiplier: 1,
-            constant: 60)
-        
-        let memoryAddButtonWidth = NSLayoutConstraint(item: self.memoryAddButton,
-            attribute: NSLayoutAttribute.Width,
-            relatedBy: NSLayoutRelation.Equal,
-            toItem: self.acButtonOutlet,
-            attribute: NSLayoutAttribute.Width,
-            multiplier: 1,
-            constant: 0)
-        
-        self.view.addSubview(self.memoryRecallButton)
-        self.memoryRecallButton.setTranslatesAutoresizingMaskIntoConstraints(false)
-        self.memoryRecallButton.backgroundColor = UIColor.blueColor()
-        self.memoryRecallButton.setTitle("M Recall", forState: .Normal)
-        self.memoryRecallButton.setTitleColor(UIColor.whiteColor(), forState: .Normal)
-        self.memoryRecallButton.titleLabel?.font = UIFont(name: "Avenir", size: 25)
-        self.memoryRecallButton.addTarget(self, action: "memoryRecallButtonPressed:", forControlEvents: .TouchUpInside)
-        
-        let memoryRecallButtonVerticalPosition = NSLayoutConstraint(item: self.memoryRecallButton,
-            attribute: NSLayoutAttribute.Top,
-            relatedBy: NSLayoutRelation.Equal,
-            toItem: self.display,
-            attribute: NSLayoutAttribute.Bottom,
-            multiplier: 1,
-            constant: 5)
-        
-        let memoryRecallButtonHorizontalPosition = NSLayoutConstraint(item: self.memoryRecallButton,
-            attribute: NSLayoutAttribute.Leading,
-            relatedBy: NSLayoutRelation.Equal,
-            toItem: self.memoryAddButton,
-            attribute: NSLayoutAttribute.Trailing,
-            multiplier: 1,
-            constant: 5)
-        
-        let memoryRecallButtonHeight = NSLayoutConstraint(item: self.memoryRecallButton,
-            attribute: NSLayoutAttribute.Height,
-            relatedBy: NSLayoutRelation.Equal,
-            toItem: nil,
-            attribute: NSLayoutAttribute.Height,
-            multiplier: 1,
-            constant: 60)
-        
-        let memoryRecallButtonWidth = NSLayoutConstraint(item: self.memoryRecallButton,
-            attribute: NSLayoutAttribute.Width,
-            relatedBy: NSLayoutRelation.Equal,
-            toItem: self.acButtonOutlet,
-            attribute: NSLayoutAttribute.Width,
-            multiplier: 2,
-            constant: 5)
-        
-        self.view.addSubview(self.memoryClearButton)
-        self.memoryClearButton.setTranslatesAutoresizingMaskIntoConstraints(false)
-        self.memoryClearButton.backgroundColor = UIColor.blueColor()
-        self.memoryClearButton.setTitle("MC", forState: .Normal)
-        self.memoryClearButton.setTitleColor(UIColor.whiteColor(), forState: .Normal)
-        self.memoryClearButton.titleLabel?.font = UIFont(name: "Avenir", size: 25)
-        self.memoryClearButton.addTarget(self, action: "memoryClearButtonPressed:", forControlEvents: .TouchUpInside)
-        
-        let memoryClearButtonVerticalPosition = NSLayoutConstraint(item: self.memoryClearButton,
-            attribute: NSLayoutAttribute.Top,
-            relatedBy: NSLayoutRelation.Equal,
-            toItem: self.display,
-            attribute: NSLayoutAttribute.Bottom,
-            multiplier: 1,
-            constant: 5)
-        
-        let memoryClearButtonHorizontalPosition = NSLayoutConstraint(item: self.memoryClearButton,
-            attribute: NSLayoutAttribute.Leading,
-            relatedBy: NSLayoutRelation.Equal,
-            toItem: self.memoryRecallButton,
-            attribute: NSLayoutAttribute.Trailing,
-            multiplier: 1,
-            constant: 5)
-        
-        let memoryClearButtonHeight = NSLayoutConstraint(item: self.memoryClearButton,
-            attribute: NSLayoutAttribute.Height,
-            relatedBy: NSLayoutRelation.Equal,
-            toItem: nil,
-            attribute: NSLayoutAttribute.Height,
-            multiplier: 1,
-            constant: 60)
-        
-        let memoryClearButtonWidth = NSLayoutConstraint(item: self.memoryClearButton,
-            attribute: NSLayoutAttribute.Width,
-            relatedBy: NSLayoutRelation.Equal,
-            toItem: self.acButtonOutlet,
-            attribute: NSLayoutAttribute.Width,
-            multiplier: 1,
-            constant: 0)
-        
-        self.view.addConstraints([memoryAddButtonVerticalPosition, memoryAddButtonHorizontalPosition, memoryAddButtonHeight, memoryAddButtonWidth, memoryRecallButtonVerticalPosition, memoryRecallButtonHorizontalPosition, memoryRecallButtonHeight, memoryRecallButtonWidth, memoryClearButtonVerticalPosition, memoryClearButtonHorizontalPosition, memoryClearButtonHeight, memoryClearButtonWidth,])
-}
+        self.memoryAddHeight.constant = 0
+        self.acVerticalSpaceToDisplay.constant = 5
+        self.memoryAddButtonOutlet.alpha = 0
+        self.memoryRecallButtonOutlet.alpha = 0
+        self.memoryClearButtonOutlet.alpha = 0
+        }
     
     func makeOperationButtonTextWhite() {
         self.plusButtonOutlet?.setTitleColor(UIColor.whiteColor(), forState: .Normal)
