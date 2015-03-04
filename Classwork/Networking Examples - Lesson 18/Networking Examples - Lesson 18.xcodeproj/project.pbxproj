@@ -1,0 +1,422 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		55143C2C1AA5432D007D3B4D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55143C2B1AA5432D007D3B4D /* AppDelegate.swift */; };
+		55143C2E1AA5432D007D3B4D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55143C2D1AA5432D007D3B4D /* ViewController.swift */; };
+		55143C311AA5432D007D3B4D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55143C2F1AA5432D007D3B4D /* Main.storyboard */; };
+		55143C331AA5432D007D3B4D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55143C321AA5432D007D3B4D /* Images.xcassets */; };
+		55143C361AA5432D007D3B4D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 55143C341AA5432D007D3B4D /* LaunchScreen.xib */; };
+		55143C421AA5432D007D3B4D /* Networking_Examples___Lesson_18Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55143C411AA5432D007D3B4D /* Networking_Examples___Lesson_18Tests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		55143C3C1AA5432D007D3B4D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 55143C1E1AA5432C007D3B4D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 55143C251AA5432D007D3B4D;
+			remoteInfo = "Networking Examples - Lesson 18";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		55143C261AA5432D007D3B4D /* Networking Examples - Lesson 18.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Networking Examples - Lesson 18.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		55143C2A1AA5432D007D3B4D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		55143C2B1AA5432D007D3B4D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		55143C2D1AA5432D007D3B4D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		55143C301AA5432D007D3B4D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		55143C321AA5432D007D3B4D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		55143C351AA5432D007D3B4D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		55143C3B1AA5432D007D3B4D /* Networking Examples - Lesson 18Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Networking Examples - Lesson 18Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		55143C401AA5432D007D3B4D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		55143C411AA5432D007D3B4D /* Networking_Examples___Lesson_18Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Networking_Examples___Lesson_18Tests.swift"; sourceTree = "<group>"; };
+		55143C4B1AA543EA007D3B4D /* Networking Playground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "Networking Playground.playground"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		55143C231AA5432D007D3B4D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		55143C381AA5432D007D3B4D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		55143C1D1AA5432C007D3B4D = {
+			isa = PBXGroup;
+			children = (
+				55143C281AA5432D007D3B4D /* Networking Examples - Lesson 18 */,
+				55143C3E1AA5432D007D3B4D /* Networking Examples - Lesson 18Tests */,
+				55143C271AA5432D007D3B4D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		55143C271AA5432D007D3B4D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				55143C261AA5432D007D3B4D /* Networking Examples - Lesson 18.app */,
+				55143C3B1AA5432D007D3B4D /* Networking Examples - Lesson 18Tests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		55143C281AA5432D007D3B4D /* Networking Examples - Lesson 18 */ = {
+			isa = PBXGroup;
+			children = (
+				55143C2B1AA5432D007D3B4D /* AppDelegate.swift */,
+				55143C2D1AA5432D007D3B4D /* ViewController.swift */,
+				55143C2F1AA5432D007D3B4D /* Main.storyboard */,
+				55143C321AA5432D007D3B4D /* Images.xcassets */,
+				55143C341AA5432D007D3B4D /* LaunchScreen.xib */,
+				55143C291AA5432D007D3B4D /* Supporting Files */,
+				55143C4B1AA543EA007D3B4D /* Networking Playground.playground */,
+			);
+			path = "Networking Examples - Lesson 18";
+			sourceTree = "<group>";
+		};
+		55143C291AA5432D007D3B4D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				55143C2A1AA5432D007D3B4D /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		55143C3E1AA5432D007D3B4D /* Networking Examples - Lesson 18Tests */ = {
+			isa = PBXGroup;
+			children = (
+				55143C411AA5432D007D3B4D /* Networking_Examples___Lesson_18Tests.swift */,
+				55143C3F1AA5432D007D3B4D /* Supporting Files */,
+			);
+			path = "Networking Examples - Lesson 18Tests";
+			sourceTree = "<group>";
+		};
+		55143C3F1AA5432D007D3B4D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				55143C401AA5432D007D3B4D /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		55143C251AA5432D007D3B4D /* Networking Examples - Lesson 18 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 55143C451AA5432D007D3B4D /* Build configuration list for PBXNativeTarget "Networking Examples - Lesson 18" */;
+			buildPhases = (
+				55143C221AA5432D007D3B4D /* Sources */,
+				55143C231AA5432D007D3B4D /* Frameworks */,
+				55143C241AA5432D007D3B4D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Networking Examples - Lesson 18";
+			productName = "Networking Examples - Lesson 18";
+			productReference = 55143C261AA5432D007D3B4D /* Networking Examples - Lesson 18.app */;
+			productType = "com.apple.product-type.application";
+		};
+		55143C3A1AA5432D007D3B4D /* Networking Examples - Lesson 18Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 55143C481AA5432D007D3B4D /* Build configuration list for PBXNativeTarget "Networking Examples - Lesson 18Tests" */;
+			buildPhases = (
+				55143C371AA5432D007D3B4D /* Sources */,
+				55143C381AA5432D007D3B4D /* Frameworks */,
+				55143C391AA5432D007D3B4D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				55143C3D1AA5432D007D3B4D /* PBXTargetDependency */,
+			);
+			name = "Networking Examples - Lesson 18Tests";
+			productName = "Networking Examples - Lesson 18Tests";
+			productReference = 55143C3B1AA5432D007D3B4D /* Networking Examples - Lesson 18Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		55143C1E1AA5432C007D3B4D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = DaveScherler;
+				TargetAttributes = {
+					55143C251AA5432D007D3B4D = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+					55143C3A1AA5432D007D3B4D = {
+						CreatedOnToolsVersion = 6.1.1;
+						TestTargetID = 55143C251AA5432D007D3B4D;
+					};
+				};
+			};
+			buildConfigurationList = 55143C211AA5432C007D3B4D /* Build configuration list for PBXProject "Networking Examples - Lesson 18" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 55143C1D1AA5432C007D3B4D;
+			productRefGroup = 55143C271AA5432D007D3B4D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				55143C251AA5432D007D3B4D /* Networking Examples - Lesson 18 */,
+				55143C3A1AA5432D007D3B4D /* Networking Examples - Lesson 18Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		55143C241AA5432D007D3B4D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				55143C311AA5432D007D3B4D /* Main.storyboard in Resources */,
+				55143C361AA5432D007D3B4D /* LaunchScreen.xib in Resources */,
+				55143C331AA5432D007D3B4D /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		55143C391AA5432D007D3B4D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		55143C221AA5432D007D3B4D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				55143C2E1AA5432D007D3B4D /* ViewController.swift in Sources */,
+				55143C2C1AA5432D007D3B4D /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		55143C371AA5432D007D3B4D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				55143C421AA5432D007D3B4D /* Networking_Examples___Lesson_18Tests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		55143C3D1AA5432D007D3B4D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 55143C251AA5432D007D3B4D /* Networking Examples - Lesson 18 */;
+			targetProxy = 55143C3C1AA5432D007D3B4D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		55143C2F1AA5432D007D3B4D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				55143C301AA5432D007D3B4D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		55143C341AA5432D007D3B4D /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				55143C351AA5432D007D3B4D /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		55143C431AA5432D007D3B4D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		55143C441AA5432D007D3B4D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		55143C461AA5432D007D3B4D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Networking Examples - Lesson 18/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		55143C471AA5432D007D3B4D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Networking Examples - Lesson 18/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		55143C491AA5432D007D3B4D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Networking Examples - Lesson 18Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Networking Examples - Lesson 18.app/Networking Examples - Lesson 18";
+			};
+			name = Debug;
+		};
+		55143C4A1AA5432D007D3B4D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Networking Examples - Lesson 18Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Networking Examples - Lesson 18.app/Networking Examples - Lesson 18";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		55143C211AA5432C007D3B4D /* Build configuration list for PBXProject "Networking Examples - Lesson 18" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				55143C431AA5432D007D3B4D /* Debug */,
+				55143C441AA5432D007D3B4D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		55143C451AA5432D007D3B4D /* Build configuration list for PBXNativeTarget "Networking Examples - Lesson 18" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				55143C461AA5432D007D3B4D /* Debug */,
+				55143C471AA5432D007D3B4D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		55143C481AA5432D007D3B4D /* Build configuration list for PBXNativeTarget "Networking Examples - Lesson 18Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				55143C491AA5432D007D3B4D /* Debug */,
+				55143C4A1AA5432D007D3B4D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 55143C1E1AA5432C007D3B4D /* Project object */;
+}

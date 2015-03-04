@@ -38,8 +38,8 @@ class ViewController: UIViewController {
         var booksPath = NSBundle.mainBundle().pathForResource("Books", ofType: "plist")
         var books = NSMutableArray(contentsOfFile: booksPath!)
         
-        books![0].setValue("Ena's World 2", forKey: "Title")
-        books!.writeToFile(booksPath!, atomically: true)
+//        books![0].setValue("Ena's World 2", forKey: "Title")
+//        books!.writeToFile(booksPath!, atomically: true)
         
         println(books!)
         

@@ -10,14 +10,28 @@ import UIKit
 
 class FirstViewController: UIViewController {
 
+    @IBOutlet weak var textView: UITextView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         let defaults = NSUserDefaults.standardUserDefaults()
         
-        defaults.setObject("test strings", forKey: "strings")
-        defaults.setObject("test numbers", forKey: "numbers")
+        var testString = defaults.objectForKey("test_string") as? NSString as? String
         
-        let strings = defaults.objectForKey("strings") as String
-        println(strings)
+        var testFloat = defaults.objectForKey("test_number") as? Float
+        
+        //testString != nil ? self.textView.text = "This formula works." : self.textView.text = "This doens't work."
+        
+        if let stringUnwrapped = testString {
+            if let floatUnwrapped = testFloat {
+                self.textView.text = "The String Data is:  \(stringUnwrapped)." +
+                "\r\n" +
+                "\r\n" +
+                "The Integer Data is: \(floatUnwrapped)."
+            } else {
+                self.textView.text = "The String Data is:  \(stringUnwrapped). The Integer Data could not be found!"
+            }} else {
+                self.textView.text = "Could Not Find String or Integer Data!"
+        }
     }
 }

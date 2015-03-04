@@ -10,9 +10,6 @@ import UIKit
 class ViewController: UIViewController {
     
     var activeButton: UIButton? = nil //var for tracking which button was pressed most recently
-//    var memoryAddButton = UIButton()
-//    var memoryRecallButton = UIButton()
-//    var memoryClearButton = UIButton()
     var numbersToCalc = [0.0, 0.0]
     var memorySubtotal: Double = 0.00
     var operation: String = ""

@@ -15,6 +15,27 @@ class SecondViewController: UIViewController {
         
         let defaults = NSUserDefaults.standardUserDefaults()
         
-        // Do any additional setup after loading the view.
+        var valueForSlider = defaults.floatForKey("settings_slider")
+        var textInTextField = defaults.stringForKey("settings_string")
+        
+        println(valueForSlider)
+        println(textInTextField)
+        
+//        let settingsBundle = NSBundle.mainBundle().pathForResource("Settings", ofType: "bundle")
+//        
+//        var rootPath: AnyObject? = NSBundle.mainBundle().pathForResource("Root", ofType: "plist")
+        
+        //var arrayOfRootDicts: NSArray? = NSArray(contentsOfFile: rootPath)
+        
+        
+//        
+//
+//        
+//        if let unwrappedArray = arrayOfRootDicts {
+//            println(unwrappedArray)
+//        } else {
+//            println("Could not load plist info!")
+//        }
+
     }
 }
