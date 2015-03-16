@@ -1,0 +1,499 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		55AA3E691AB101DC00EB891C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55AA3E681AB101DC00EB891C /* AppDelegate.swift */; };
+		55AA3E6B1AB101DC00EB891C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55AA3E6A1AB101DC00EB891C /* ViewController.swift */; };
+		55AA3E6E1AB101DC00EB891C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55AA3E6C1AB101DC00EB891C /* Main.storyboard */; };
+		55AA3E701AB101DC00EB891C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55AA3E6F1AB101DC00EB891C /* Images.xcassets */; };
+		55AA3E731AB101DC00EB891C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 55AA3E711AB101DC00EB891C /* LaunchScreen.xib */; };
+		55AA3E7F1AB101DC00EB891C /* Whisper_App_Example___lesson_21Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55AA3E7E1AB101DC00EB891C /* Whisper_App_Example___lesson_21Tests.swift */; };
+		55AA3E891AB1038300EB891C /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55AA3E881AB1038300EB891C /* Parse.framework */; };
+		55AA3E8B1AB1039100EB891C /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55AA3E8A1AB1039100EB891C /* Bolts.framework */; };
+		55AA3E8D1AB103DC00EB891C /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55AA3E8C1AB103DC00EB891C /* AudioToolbox.framework */; };
+		55AA3E8F1AB103ED00EB891C /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55AA3E8E1AB103ED00EB891C /* CFNetwork.framework */; };
+		55AA3E911AB103FC00EB891C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55AA3E901AB103FC00EB891C /* CoreGraphics.framework */; };
+		55AA3E931AB1040C00EB891C /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55AA3E921AB1040C00EB891C /* CoreLocation.framework */; };
+		55AA3E951AB1041800EB891C /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55AA3E941AB1041800EB891C /* MobileCoreServices.framework */; };
+		55AA3E971AB1042600EB891C /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55AA3E961AB1042600EB891C /* QuartzCore.framework */; };
+		55AA3E991AB1043A00EB891C /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55AA3E981AB1043A00EB891C /* Security.framework */; };
+		55AA3E9B1AB1044000EB891C /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55AA3E9A1AB1044000EB891C /* StoreKit.framework */; };
+		55AA3E9D1AB1045000EB891C /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55AA3E9C1AB1044F00EB891C /* SystemConfiguration.framework */; };
+		55AA3E9F1AB1045C00EB891C /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 55AA3E9E1AB1045C00EB891C /* libz.dylib */; };
+		55AA3EA11AB1047000EB891C /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 55AA3EA01AB1047000EB891C /* libsqlite3.dylib */; };
+		55AA3EA71AB1191600EB891C /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55AA3EA61AB1191600EB891C /* UserViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		55AA3E791AB101DC00EB891C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 55AA3E5B1AB101DC00EB891C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 55AA3E621AB101DC00EB891C;
+			remoteInfo = "Whisper App Example - lesson 21";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		55AA3E631AB101DC00EB891C /* Whisper App Example - lesson 21.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Whisper App Example - lesson 21.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		55AA3E671AB101DC00EB891C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		55AA3E681AB101DC00EB891C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		55AA3E6A1AB101DC00EB891C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		55AA3E6D1AB101DC00EB891C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		55AA3E6F1AB101DC00EB891C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		55AA3E721AB101DC00EB891C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		55AA3E781AB101DC00EB891C /* Whisper App Example - lesson 21Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Whisper App Example - lesson 21Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		55AA3E7D1AB101DC00EB891C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		55AA3E7E1AB101DC00EB891C /* Whisper_App_Example___lesson_21Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Whisper_App_Example___lesson_21Tests.swift"; sourceTree = "<group>"; };
+		55AA3E881AB1038300EB891C /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = ../Parse.framework; sourceTree = "<group>"; };
+		55AA3E8A1AB1039100EB891C /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = ../Bolts.framework; sourceTree = "<group>"; };
+		55AA3E8C1AB103DC00EB891C /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		55AA3E8E1AB103ED00EB891C /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		55AA3E901AB103FC00EB891C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		55AA3E921AB1040C00EB891C /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		55AA3E941AB1041800EB891C /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		55AA3E961AB1042600EB891C /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		55AA3E981AB1043A00EB891C /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		55AA3E9A1AB1044000EB891C /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		55AA3E9C1AB1044F00EB891C /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		55AA3E9E1AB1045C00EB891C /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		55AA3EA01AB1047000EB891C /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		55AA3EA31AB1055B00EB891C /* Whisper App Example - lesson 21-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Whisper App Example - lesson 21-Bridging-Header.h"; sourceTree = "<group>"; };
+		55AA3EA61AB1191600EB891C /* UserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		55AA3E601AB101DC00EB891C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				55AA3EA11AB1047000EB891C /* libsqlite3.dylib in Frameworks */,
+				55AA3E9F1AB1045C00EB891C /* libz.dylib in Frameworks */,
+				55AA3E9D1AB1045000EB891C /* SystemConfiguration.framework in Frameworks */,
+				55AA3E9B1AB1044000EB891C /* StoreKit.framework in Frameworks */,
+				55AA3E991AB1043A00EB891C /* Security.framework in Frameworks */,
+				55AA3E971AB1042600EB891C /* QuartzCore.framework in Frameworks */,
+				55AA3E951AB1041800EB891C /* MobileCoreServices.framework in Frameworks */,
+				55AA3E931AB1040C00EB891C /* CoreLocation.framework in Frameworks */,
+				55AA3E911AB103FC00EB891C /* CoreGraphics.framework in Frameworks */,
+				55AA3E8F1AB103ED00EB891C /* CFNetwork.framework in Frameworks */,
+				55AA3E8D1AB103DC00EB891C /* AudioToolbox.framework in Frameworks */,
+				55AA3E891AB1038300EB891C /* Parse.framework in Frameworks */,
+				55AA3E8B1AB1039100EB891C /* Bolts.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		55AA3E751AB101DC00EB891C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		55AA3E5A1AB101DC00EB891C = {
+			isa = PBXGroup;
+			children = (
+				55AA3E651AB101DC00EB891C /* Whisper App Example - lesson 21 */,
+				55AA3E7B1AB101DC00EB891C /* Whisper App Example - lesson 21Tests */,
+				55AA3E641AB101DC00EB891C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		55AA3E641AB101DC00EB891C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				55AA3E631AB101DC00EB891C /* Whisper App Example - lesson 21.app */,
+				55AA3E781AB101DC00EB891C /* Whisper App Example - lesson 21Tests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		55AA3E651AB101DC00EB891C /* Whisper App Example - lesson 21 */ = {
+			isa = PBXGroup;
+			children = (
+				55AA3EA21AB104E000EB891C /* Frameworks */,
+				55AA3E681AB101DC00EB891C /* AppDelegate.swift */,
+				55AA3E6A1AB101DC00EB891C /* ViewController.swift */,
+				55AA3E6C1AB101DC00EB891C /* Main.storyboard */,
+				55AA3EA61AB1191600EB891C /* UserViewController.swift */,
+				55AA3E6F1AB101DC00EB891C /* Images.xcassets */,
+				55AA3E711AB101DC00EB891C /* LaunchScreen.xib */,
+				55AA3E661AB101DC00EB891C /* Supporting Files */,
+				55AA3EA31AB1055B00EB891C /* Whisper App Example - lesson 21-Bridging-Header.h */,
+			);
+			path = "Whisper App Example - lesson 21";
+			sourceTree = "<group>";
+		};
+		55AA3E661AB101DC00EB891C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				55AA3E671AB101DC00EB891C /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		55AA3E7B1AB101DC00EB891C /* Whisper App Example - lesson 21Tests */ = {
+			isa = PBXGroup;
+			children = (
+				55AA3E7E1AB101DC00EB891C /* Whisper_App_Example___lesson_21Tests.swift */,
+				55AA3E7C1AB101DC00EB891C /* Supporting Files */,
+			);
+			path = "Whisper App Example - lesson 21Tests";
+			sourceTree = "<group>";
+		};
+		55AA3E7C1AB101DC00EB891C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				55AA3E7D1AB101DC00EB891C /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		55AA3EA21AB104E000EB891C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				55AA3EA01AB1047000EB891C /* libsqlite3.dylib */,
+				55AA3E9E1AB1045C00EB891C /* libz.dylib */,
+				55AA3E9C1AB1044F00EB891C /* SystemConfiguration.framework */,
+				55AA3E9A1AB1044000EB891C /* StoreKit.framework */,
+				55AA3E981AB1043A00EB891C /* Security.framework */,
+				55AA3E961AB1042600EB891C /* QuartzCore.framework */,
+				55AA3E941AB1041800EB891C /* MobileCoreServices.framework */,
+				55AA3E921AB1040C00EB891C /* CoreLocation.framework */,
+				55AA3E901AB103FC00EB891C /* CoreGraphics.framework */,
+				55AA3E8E1AB103ED00EB891C /* CFNetwork.framework */,
+				55AA3E8C1AB103DC00EB891C /* AudioToolbox.framework */,
+				55AA3E8A1AB1039100EB891C /* Bolts.framework */,
+				55AA3E881AB1038300EB891C /* Parse.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		55AA3E621AB101DC00EB891C /* Whisper App Example - lesson 21 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 55AA3E821AB101DC00EB891C /* Build configuration list for PBXNativeTarget "Whisper App Example - lesson 21" */;
+			buildPhases = (
+				55AA3E5F1AB101DC00EB891C /* Sources */,
+				55AA3E601AB101DC00EB891C /* Frameworks */,
+				55AA3E611AB101DC00EB891C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Whisper App Example - lesson 21";
+			productName = "Whisper App Example - lesson 21";
+			productReference = 55AA3E631AB101DC00EB891C /* Whisper App Example - lesson 21.app */;
+			productType = "com.apple.product-type.application";
+		};
+		55AA3E771AB101DC00EB891C /* Whisper App Example - lesson 21Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 55AA3E851AB101DC00EB891C /* Build configuration list for PBXNativeTarget "Whisper App Example - lesson 21Tests" */;
+			buildPhases = (
+				55AA3E741AB101DC00EB891C /* Sources */,
+				55AA3E751AB101DC00EB891C /* Frameworks */,
+				55AA3E761AB101DC00EB891C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				55AA3E7A1AB101DC00EB891C /* PBXTargetDependency */,
+			);
+			name = "Whisper App Example - lesson 21Tests";
+			productName = "Whisper App Example - lesson 21Tests";
+			productReference = 55AA3E781AB101DC00EB891C /* Whisper App Example - lesson 21Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		55AA3E5B1AB101DC00EB891C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = DaveScherler;
+				TargetAttributes = {
+					55AA3E621AB101DC00EB891C = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+					55AA3E771AB101DC00EB891C = {
+						CreatedOnToolsVersion = 6.1.1;
+						TestTargetID = 55AA3E621AB101DC00EB891C;
+					};
+				};
+			};
+			buildConfigurationList = 55AA3E5E1AB101DC00EB891C /* Build configuration list for PBXProject "Whisper App Example - lesson 21" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 55AA3E5A1AB101DC00EB891C;
+			productRefGroup = 55AA3E641AB101DC00EB891C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				55AA3E621AB101DC00EB891C /* Whisper App Example - lesson 21 */,
+				55AA3E771AB101DC00EB891C /* Whisper App Example - lesson 21Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		55AA3E611AB101DC00EB891C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				55AA3E6E1AB101DC00EB891C /* Main.storyboard in Resources */,
+				55AA3E731AB101DC00EB891C /* LaunchScreen.xib in Resources */,
+				55AA3E701AB101DC00EB891C /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		55AA3E761AB101DC00EB891C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		55AA3E5F1AB101DC00EB891C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				55AA3E6B1AB101DC00EB891C /* ViewController.swift in Sources */,
+				55AA3EA71AB1191600EB891C /* UserViewController.swift in Sources */,
+				55AA3E691AB101DC00EB891C /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		55AA3E741AB101DC00EB891C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				55AA3E7F1AB101DC00EB891C /* Whisper_App_Example___lesson_21Tests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		55AA3E7A1AB101DC00EB891C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 55AA3E621AB101DC00EB891C /* Whisper App Example - lesson 21 */;
+			targetProxy = 55AA3E791AB101DC00EB891C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		55AA3E6C1AB101DC00EB891C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				55AA3E6D1AB101DC00EB891C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		55AA3E711AB101DC00EB891C /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				55AA3E721AB101DC00EB891C /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		55AA3E801AB101DC00EB891C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		55AA3E811AB101DC00EB891C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		55AA3E831AB101DC00EB891C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = "Whisper App Example - lesson 21/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Whisper App Example - lesson 21/Whisper App Example - lesson 21-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		55AA3E841AB101DC00EB891C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = "Whisper App Example - lesson 21/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Whisper App Example - lesson 21/Whisper App Example - lesson 21-Bridging-Header.h";
+			};
+			name = Release;
+		};
+		55AA3E861AB101DC00EB891C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Whisper App Example - lesson 21Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Whisper App Example - lesson 21.app/Whisper App Example - lesson 21";
+			};
+			name = Debug;
+		};
+		55AA3E871AB101DC00EB891C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Whisper App Example - lesson 21Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Whisper App Example - lesson 21.app/Whisper App Example - lesson 21";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		55AA3E5E1AB101DC00EB891C /* Build configuration list for PBXProject "Whisper App Example - lesson 21" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				55AA3E801AB101DC00EB891C /* Debug */,
+				55AA3E811AB101DC00EB891C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		55AA3E821AB101DC00EB891C /* Build configuration list for PBXNativeTarget "Whisper App Example - lesson 21" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				55AA3E831AB101DC00EB891C /* Debug */,
+				55AA3E841AB101DC00EB891C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		55AA3E851AB101DC00EB891C /* Build configuration list for PBXNativeTarget "Whisper App Example - lesson 21Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				55AA3E861AB101DC00EB891C /* Debug */,
+				55AA3E871AB101DC00EB891C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 55AA3E5B1AB101DC00EB891C /* Project object */;
+}
