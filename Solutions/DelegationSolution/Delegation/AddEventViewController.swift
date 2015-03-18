@@ -38,6 +38,7 @@ class AddEventViewController: UIViewController {
         
         // send delgate message
         self.delegate?.saveEvent(newEvent)
+        println(delegate)
         
         // use existing dismiss function to dismiss our view
         dismiss()

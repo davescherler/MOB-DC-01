@@ -407,6 +407,7 @@
 				2EC1DB611AB7151B0022AAAB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2EC1DB621AB7151B0022AAAB /* Build configuration list for PBXNativeTarget "Animation-IntroductionTests" */ = {
 			isa = XCConfigurationList;
@@ -415,6 +416,7 @@
 				2EC1DB641AB7151B0022AAAB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
